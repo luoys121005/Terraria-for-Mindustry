@@ -1,0 +1,12 @@
+{
+    "name": "铂金锭",
+    "description": "锭",
+    "details": "",
+    "color": "B5C2D9FF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 1,
+    "alwaysUnlocked": false,
+    "research": "铂金矿"
+}

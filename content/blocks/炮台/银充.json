@@ -1,0 +1,66 @@
+{
+    "type": "ItemTurret",
+    "name": "银充",
+    "localizedName": "银充",
+     "description": "发射间断释放闪电结束后爆炸的炮弹",
+    "category": "turret",
+    "requirements": [
+        "银锭/20"
+    ],
+    "size": 1,
+    "maxAmmo":30,
+    "scaledHealth": 300,
+    "inaccuracy": 0,
+    "shootY": 2,
+    "reload": 12,
+    "recoil": 0,
+    "buildTime": 100,
+    "range": 192,
+    "rotateSpeed": 5,
+    "targetAir": true,
+    "targetGround": true,
+    "ammoTypes": {
+        "银锭": {
+            "type": "BasicBulletType",
+            "damage": 9,
+            "speed": 6,
+            "lifetime": 30,
+            "width": 16,
+            "height": 16,
+            "pierceCap": 3,
+            "buildingDamageMultiplier": 0.1,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "trailLength": 24,
+            "trailWidth": 2.2,
+            "trailInterval": 3,
+            "trailParam": 4,
+            "hitColor": "E6E8EBFF",
+            "backColor": "E8E4DFFF",
+            "frontColor": "E6E8EBFF",
+            "trailColor": "E6E8EBFF",
+            "sprite": "large-orb",
+            "despawnSound": "explosionAfflict",
+            "shootSound": "shootAfflict",
+            "bulletInterval": 3,
+            "intervalRandomSpread": 360,
+            "intervalBullets": 10,
+            "intervalAngle": 180,
+            "intervalSpread": 300,
+            "intervalBullet": {
+                "type": "LightningBulletType",
+                "damage": 2,
+                "lifetime": 1,
+                "lightningLength": 7,
+                "pierceBuilding": true,
+                "buildingDamageMultiplier": 0.1
+           }
+        }
+    },
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "银锭/55"
+        ]
+    }
+}

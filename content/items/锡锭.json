@@ -1,0 +1,11 @@
+{
+    "name": "锡锭",
+    "description": "锭",
+    "color": "E4DBA2FF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 1,
+    "alwaysUnlocked": false,
+    "research": "锡矿"
+}

@@ -1,0 +1,43 @@
+{
+    "type": "ItemTurret",
+    "name": "铜短炮",
+    "localizedName": "铜短炮",
+    "description": "发射一道刺弹",
+    "outlineWidth": 0.1,
+    "category": "turret",
+    "buildTime": 100,
+    "requirements":[
+        "铜锭/20"
+    ],
+    "ammoTypes":{
+        "铜锭":{
+            "type": "ShrapnelBulletType",
+            "length": 50,
+            "damage": 5,
+            "ammoMultiplier": 4.0,
+            "width": 17.0,
+            "reloadMultiplier": 1,
+            "toColor": "C9A58FFF"
+        }
+    },
+    "shoot": {
+        "type": "Shoot",
+        "shots": 1
+    },
+    "shootSound": "shootDuo",
+    "recoil": 0.5,
+    "shootY": 8,
+    "reload": 13,
+    "range": 60,
+    "shootCone": 15.0,
+    "ammoUseEffect": "casing1",
+    "health": 100,
+    "inaccuracy": 2.0,
+    "rotateSpeed": 10.0,
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "铜锭/55"
+        ]
+    }
+}

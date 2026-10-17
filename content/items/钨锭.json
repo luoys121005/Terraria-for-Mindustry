@@ -1,0 +1,11 @@
+{
+    "name": "钨锭",
+    "description": "锭",
+    "color": "91FFC6FF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 1,
+    "alwaysUnlocked": false,
+    "research": "钨矿"
+}

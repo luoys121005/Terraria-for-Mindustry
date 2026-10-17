@@ -1,0 +1,90 @@
+{
+    "type": "ItemTurret",
+    "name": "钨爆",
+    "localizedName": "钨爆",
+    "description": "发射大量闪电",
+    "category": "turret",
+    "requirements": [
+        "钨锭/20"
+    ],
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "钨锭/40"
+        ]
+    },
+    "size": 1,
+    "maxAmmo":30,
+    "scaledHealth": 100,
+    "inaccuracy": 0,
+    "shootY": 0,
+    "reload": 80,
+    "recoil": 0,
+    "buildTime": 200,
+    "range": 240,
+    "rotateSpeed": 5,
+    "targetAir": true,
+    "targetGround": true,
+    "ammoTypes": {
+        "钨锭": {
+    "type": "BasicBulletType",
+    "sprite":"large-orb",
+    "lifetime": 60,                  // 默认40.0，子弹总存活时长（单位：tick/帧）
+    "speed": 7.5,                      // 默认1.0，子弹飞行速度（单位/帧）
+    "damage": 8,                     // 默认1.0，基础直接命中伤害
+    "hitSize": 12,                    // 默认4.0，子弹碰撞命中盒半径
+    "angleOffset": 0.0,                // 默认0.0，子弹固定发射角度偏移(度)
+    "randomAngleOffset": 0.0,          // 默认0.0，额外随机角度偏移范围(度)
+    "drag": 0.031,                       // 默认0.0，空气阻力，每帧按比例衰减速度
+    "pierce": false,                   // 默认false，是否穿透单位
+    "pierceBuilding": false,           // 默认false，是否穿透建筑方块
+    "laserAbsorb": true,               // 默认true，激光子类是否被塑钢墙体吸收
+    "hitEffect": "none",     // 默认hitBulletSmall，命中时播放特效
+    "despawnEffect": "none", // 默认hitBulletSmall，寿命耗尽消失特效
+    "shootEffect": "none",        // 默认shootSmall，开火瞬间特效
+    "chargeEffect": "none",            // 默认none，蓄力阶段特效（仅带延迟发射武器生效）
+    "smokeEffect": "none",  // 默认shootSmallSmoke，开火额外烟雾特效
+
+    "shootSound": "shootAfflict",              // 默认none，自定义开火音效（炮台有效，单位多弹药无效）
+    "hitSound": "none",                // 默认none，命中/销毁音效
+    "despawnSound": "shootArc",            // 默认none，寿命结束音效
+    "inaccuracy": 0.0,                // 默认0.0，额外开火散布值，越大散射越强
+    "recoil": 3,                     // 默认0.0，发射后后坐力
+    "knockback": 10     ,                  // 默认0.0，命中击退力度
+    "targetBlocks": true,              // 默认true（炮台限定），是否锁定方块
+    "targetMissiles": true,            // 默认true（炮台限定），是否锁定敌方导弹
+    "collidesTiles": true,             // 默认true，子弹是否和地形方块碰撞
+    "collidesTeam": false,             // 默认false，是否友方单位/方块碰撞
+    "collidesAir": true,               // 默认true，是否碰撞空军单位
+    "collidesGround": true,            // 默认true，是否碰撞地面单位
+    "collideFloor": false,             // 默认false，是否和底层非地表地板碰撞
+    "collideTerrain": false,           // 默认false，是否和静态墙体地形碰撞
+    "hittable": false,                  // 默认true，能否被拦截系统拦截
+    "reflectable": false,               // 默认true，能否被反弹机制反弹
+    "absorbable": true,                // 默认true，能否被护盾吸收
+    "fragOnHit": true,                // 默认true，命中时生成分裂子弹
+    "fragOnDespawn": true,            // 默认true，消失时生成分裂子弹
+    "fragOnAbsorb": true,             // 默认true，被护盾吸收也生成分裂子弹
+    "fragBullet": {
+    "type":"LightningBulletType",
+        "lightning": 1,                   // 默认0，闪电分叉链数量，0=不生成闪电
+     "lightningLength": 8,            // 【★LightningBulletType 独有字段】默认值由构造器指定，闪电单条总段数
+     "lightningLengthRand": 0,         // 【★LightningBulletType 独有字段】额外随机增加段数
+     "lightningDamage": 3,          // 默认-1；负数=使用外层damage，正数=独立闪电伤害
+     "lightningCone": 15,           // 默认360，闪电整体发散锥形角度
+     "lightningAngle": 0.0,            // 默认0，闪电整体角度偏移
+    },               // 默认null，分裂使用的子弹类型
+    "fragRandomSpread": 0,        // 默认360，分裂随机角度范围
+    "fragSpread":36,                // 默认0.0，分裂子弹均匀角度间隔
+    "fragAngle": 0,                 // 默认0.0，分裂整体角度偏移
+    "fragBullets": 6,                 // 默认9，分裂子弹总数量
+    "splashDamageRadius": 32,       // 默认-1，溅射伤害半径，负数关闭溅射范围
+    "splashDamagePierce": true,      // 默认false，溅射伤害穿透地形方块
+    "width": 10,                     // 子弹贴图宽度
+    "height": 10,                    // 子弹贴图高度
+    "shrinkX": 0,                   // X轴尾部收缩系数，做成尖头效果
+    "shrinkY": 0,                   // Y轴尾部收缩系数
+}
+
+    }
+}

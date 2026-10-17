@@ -1,0 +1,103 @@
+{
+    "type": "ItemTurret",
+    "name": "火花魔炮",
+    "localizedName": "火花魔炮",
+    "description": "发射火花",
+    "category": "turret",
+    "size": 1,
+    "health": 20,
+    "reload": 26,
+    "range": 220,
+    "rotateSpeed": 3,
+    "recoil": 0,
+    "minWarmup": 0.65,
+    "shootWarmupSpeed":0.03
+    "requirements":[
+        "木头/25",
+        "魔锭/25"
+    ],
+    "drawer":{
+        "type":"DrawTurret",
+        "parts":
+        [
+            {
+    "type": "RegionPart",          // 零件固定类型，代表使用自定义外部贴图的零件
+    "mirror": false,                // 是否开启左右镜像，炮塔对称配件开启true，单侧独立配件填false
+    "x": -2,                       // 零件相对于炮塔旋转轴心的水平偏移坐标
+    "y": 0.8,                     // 零件相对于炮塔旋转轴心的垂直偏移坐标
+    "suffix": "-l",             // 贴图后缀名称，最终贴图名称=炮塔ID+该后缀
+    "under": true,                 // true绘制在炮塔主体下层，false覆盖绘制在炮塔主体上层
+    "originX": 3,                  // 贴图自身旋转轴心X坐标，默认以贴图中心点旋转
+    "originY": 0,                  // 贴图自身旋转轴心Y坐标，默认以贴图中心点旋转
+
+    "moves": [                     // 精细化多段动画数组，优先级高于外层moveX/moveY/moveRot
+        {
+            "progress": "warmup",   // 当前组动画绑定的进度类型
+            "x": -2,                 // 该进度满值时贴图X轴最终偏移量
+            "y": 0.8,               // 该进度满值时贴图Y轴最终偏移量
+            "rot": 23                // 该进度满值时贴图最终旋转角度
+        }
+    ],
+    "progress":"warmup",
+},
+            {
+    "type": "RegionPart",          // 零件固定类型，代表使用自定义外部贴图的零件
+    "mirror": false,                // 是否开启左右镜像，炮塔对称配件开启true，单侧独立配件填false
+    "x": 2,                       // 零件相对于炮塔旋转轴心的水平偏移坐标
+    "y": 0.8,                     // 零件相对于炮塔旋转轴心的垂直偏移坐标
+    "suffix": "-r",             // 贴图后缀名称，最终贴图名称=炮塔ID+该后缀
+    "under": true,                 // true绘制在炮塔主体下层，false覆盖绘制在炮塔主体上层
+    "originX": -3,                  // 贴图自身旋转轴心X坐标，默认以贴图中心点旋转
+    "originY": 0,                  // 贴图自身旋转轴心Y坐标，默认以贴图中心点旋转
+
+    "moves": [                     // 精细化多段动画数组，优先级高于外层moveX/moveY/moveRot
+        {
+            "progress": "warmup",   // 当前组动画绑定的进度类型
+            "x": 2,                 // 该进度满值时贴图X轴最终偏移量
+            "y": 0.8,               // 该进度满值时贴图Y轴最终偏移量
+            "rot": -23                // 该进度满值时贴图最终旋转角度
+        }
+    ],
+    "progress":"warmup",
+}
+
+        ]
+    }
+    "shootSound": "shootFlamePlasma",
+    "hasPower": false,
+    "targetAir": true,
+    "targetGround": true,
+    "ammoTypes": {
+        "木头": {
+            "type": "BasicBulletType",
+            "width": 12,
+            "height": 16,
+            "speed": 4,
+            "lifetime": 60,
+            "damage": 9,
+            "sprite": "terrariaformindustry-火花",
+            "ammoMultiplier": 5,
+            "trailChance": 1,
+            "trailEffect": {
+              "type": "ParticleEffect",
+              "length": 20,
+              "lifetime": 15,
+              "sizeFrom": 5,
+              "sizeTo": 1,
+              "region": "terrariaformindustry-粒子特效1",
+              "colorFrom": "FF0000FF",
+              "colorTo": "FF8D8D00"
+            }
+        }
+    },
+    "shootX": 0,
+    "shootY": 1,
+    "buildTime": 100,
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "木头/100",
+            "魔锭/50"
+        ]
+    }
+}

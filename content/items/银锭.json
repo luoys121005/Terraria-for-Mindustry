@@ -1,0 +1,11 @@
+{
+    "name": "银锭",
+    "description": "锭",
+    "color": "FFFFFFFF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 1,
+    "alwaysUnlocked": false,
+    "research": "银矿"
+}

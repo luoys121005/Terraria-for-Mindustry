@@ -1,0 +1,1683 @@
+{
+  "type": "flying",
+  "name": "克苏鲁之眼",
+  "localizedName": "克苏鲁之眼",
+  "description": "",
+  "rotateSpeed": 2.1,
+  "flying": true,
+  "wobble": false,
+  "circleTarget": false,
+  "autoDropBombs": false,
+  "boostWhenBuilding": true,
+  "lowAltitude": true,
+  "speed": 1.5,
+  "fallSpeed": 0.3,
+  "trailLength": 16,
+  "trailColor": "FF0000FF",
+  "engineOffset": 21,
+  "engineSize": 5,
+  "engineColor": "FF7C69FF",
+  "engineColorInner": "FF0000FF",
+  "engines": [
+    {
+      "x": 0,
+      "y": -21,
+      "radius": 0,
+      "rotation": -90
+    }
+  ],
+  "health": 3640,
+  "armor": 12,
+  "hitSize": 48,
+  "deathShake": 8,
+  "createWreck": true,
+  "createScorch": true,
+  "targetAir": true,
+  "targetGround": true,
+  "faceTarget": true,
+  "singleTarget": false,
+  "forceMultiTarget": false,
+  "canAttack": true,
+  "autoFindTarget": true,
+  "targetUnderBlocks": true,
+  "alwaysShootWhenMoving": true,
+  "physics": true,
+  "drawCell": true,
+  "draBody": true,
+  "drawSoftShadow": true,
+  "drawMinimap": true,
+  "outlineRadius": 3,
+  "outlines": true,
+  "abilities": [
+    {
+        "type": "UnitSpawnAbility",       // 能力类型：单位生成能力
+        "unit": "克苏鲁之仆",                 // 【必填】要生成的单位ID（UnitType名称）
+        "spawnTime": 240,               // 生成冷却间隔，单位tick，默认60
+        "spawnX": 13,                   // 生成位置相对方块中心X偏移，默认0
+        "spawnY": -21,                  // 生成位置相对方块中心Y偏移，默认0，负值向上
+        "spawnEffect": "spawn",          // 生成时播放的特效，默认原版spawn
+        "parentizeEffects": false        // 特效是否绑定父方块生命周期，默认false
+    },
+    {
+        "type": "UnitSpawnAbility",       // 能力类型：单位生成能力
+        "unit": "克苏鲁之仆",                 // 【必填】要生成的单位ID（UnitType名称）
+        "spawnTime": 240,               // 生成冷却间隔，单位tick，默认60
+        "spawnX": -13,                   // 生成位置相对方块中心X偏移，默认0
+        "spawnY": -21,                  // 生成位置相对方块中心Y偏移，默认0，负值向上
+        "spawnEffect": "spawn",          // 生成时播放的特效，默认原版spawn
+        "parentizeEffects": false        // 特效是否绑定父方块生命周期，默认false
+    }
+],
+
+  "weapons": [
+    {
+      "name": "克苏鲁之眼2",
+      "shoot": {
+        "type": "ShootPattern",
+        "shots": 5,
+        "shotDelay": 20,
+      },
+      "display": true,
+      "mirror": true,
+      "alternate": false,
+      "rotate": true,
+      "showStatSprite": true,
+      "top": true,
+      "rotateSpeed": 2.9,
+      "reload": 75,
+      "inaccuracy": 3,
+      "shake": 0.0,
+      "recoil": 6,
+      "recoilTime": 60,
+      "shootX": 0.0,
+      "shootY": 10,
+      "x": 12,
+      "y": 2,
+      "rotationLimit": 135,
+      "shootSound": "克苏鲁之眼2攻击音效",      // 自定义开火音效（仅炮台生效）
+      "bullet": {
+        "type": "BasicBulletType",                 // 实体类型：基础子弹类
+        "sprite":"terrariaformindustry-血弹",
+        "width": 11,
+        "height": 36,
+        "hitSize": 18,                         // 碰撞判定盒大小
+        "lifetime": 12,                     // 子弹总存活时间，单位tick
+        "speed": 32,                         // 飞行速度：单位/每帧
+        "damage": 16,                        // 直接命中伤害
+        "pierce": false,                      // 是否穿透单位
+        "pierceBuilding": false,             // 是否穿透建筑
+"hitEffect": {
+    "type": "MultiEffect",
+    "effects": [
+        {
+            "particles": 1,
+            "region": "terrariaformindustry-粒子特效1",
+            "lifetime": 20,
+            "length": 0,
+            "baseLength": 0,
+            "sizeFrom": 32,
+            "sizeTo": 32,
+            "colorFrom": "FF4646",
+            "colorTo": "FF464600",
+            "layer": 109
+        },
+        {
+            "particles": 1,
+            "region": "terrariaformindustry-冲击波1",
+            "lifetime": 30,
+            "length": 0,
+            "baseLength": 0,
+            "interp": "pow2Out",
+            "sizeInterp": "pow5Out",
+            "sizeFrom": 0,
+            "sizeTo": 60,
+            "colorFrom": "D60000FF",
+            "colorTo": "FF545420"
+        },
+        {
+            "particles": 1,
+            "region": "terrariaformindustry-冲击波1",
+            "lifetime": 30,
+            "length": 0,
+            "baseLength": 0,
+            "interp": "pow2Out",
+            "sizeInterp": "pow5Out",
+            "sizeFrom": 0,
+            "sizeTo": 74,
+            "colorFrom": "D60000FF",
+            "colorTo": "FF545420"
+        },
+        {
+            "particles": 16,
+            "line": true,
+            "lifetime": 15,
+            "length": 0,
+            "baseLength": 1,
+            "interp": "pow10Out",
+            "sizeInterp": "pow2In",
+            "lenFrom": 56,
+            "lenTo": 0,
+            "strokeFrom": 1.5,
+            "strokeTo": 0,
+            "colorFrom": "FF6464",
+            "colorTo": "FF6464"
+        },
+        {
+            "particles": 12,
+            "region": "terrariaformindustry-正方形",
+            "lifetime": 30,
+            "length": 56,
+            "baseLength": 8,
+            "interp": "pow5Out",
+            "sizeInterp": "pow2In",
+            "spin": -4,
+            "sizeFrom": 6,
+            "sizeTo": 0,
+            "colorFrom": "D60000FF",
+            "colorTo": "D60000FF"
+        },
+        {
+            "particles": 12,
+            "region": "terrariaformindustry-三角形",
+            "lifetime": 30,
+            "length": 56,
+            "baseLength": 8,
+            "interp": "pow5Out",
+            "sizeInterp": "pow2In",
+            "spin": -4,
+            "sizeFrom": 6,
+            "sizeTo": 0,
+            "colorFrom": "D60000FF",
+            "colorTo": "D60000FF"
+        }
+    ]
+},
+
+    "showStats": false,
+        "despawnEffect": "hitBulletSmall",   // 寿命结束消失特效
+        "shootEffect": "none",         // 开火生成特效
+        "chargeEffect": "none",              // 蓄力阶段特效，需要firstShotDelay生效
+        "smokeEffect": "shootSmallSmoke",    // 开火额外烟雾特效
+        "hitSound": "克苏鲁之眼2子弹击中音效",                  // 命中音效
+        "despawnSound": "none",              // 消失音效
+        "hitSoundPitch": 1.0,                // 命中声音基准音调
+        "hitSoundPitchRange": 0.1,           // 音调随机浮动范围
+        "hitSoundVolume": 1.0,               // 命中音量
+        "inaccuracy": 0.0,                   // 额外散布误差
+        "splashDamage": 6,                 // 爆炸溅射伤害，0关闭
+        "knockback": 8,                    // 命中击退力度
+        "collidesTiles": true,               // 是否和地形方块碰撞
+        "collidesTeam": false,               // 是否和友方实体碰撞
+        "collidesAir": true,                // 可命中空中单位
+        "collidesGround": true,             // 可命中地面单位
+        "collideFloor": false,              // 是否与底层地板碰撞
+        "collideTerrain": false,            // 是否与静态墙体地形碰撞
+        "maxRange": 50,                   // 射程硬上限，正数覆盖原有射程
+        "hitColor": "ffffffff",             // 命中/消失特效颜色 RGBA
+        "trailColor": "e58956ff",           // 尾迹颜色 RGBA
+        "trailLength": 8,                  // 网格尾迹长度，<=0禁用
+        "trailWidth": 5,                  // 网格尾迹宽度
+        "splashDamageRadius": 36,          // 溅射伤害范围，负数关闭
+        "splashDamagePierce": true,         // 溅射能否穿透地形方块
+        "homingPower": 0.2,                 // 追踪力度(0~1)
+        "homingRange": 320,                // 追踪生效范{{
+        "fragOnHit": true,
+"fragBullets": 1,
+"fragBullet": {
+    "type": "MultiBulletType",
+    "damage": 0,
+    "lifetime": 0,
+    "rangeOverride": 0,
+    "speed": 0,
+    "velocityScale":0,
+    "hitEffect": "none",
+    "hitSound": "none",
+    "despawnEffect": "none",
+    "showStats": false,
+    "instantDisappear": true,
+    "collides": false,
+    "absorbable": false,
+    "hittable": false,
+    "bullets": [
+        {
+            "type": "BasicBulletType",
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 15,
+            "speed": 0,
+            "velocityScale":0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 64,
+                    "triLengthTo": 64,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                },
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 60,
+                    "triLengthTo": 60,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 110,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 180,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 64,
+                    "triLengthTo": 64,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 200,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 60,
+                    "triLengthTo": 60,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 20,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 50,
+                    "triLengthTo": 50,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 57,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 123,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 289,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 34,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 210,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 98,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 315,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 156,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF6464",
+                    "colorTo": "FF4040",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 6,
+                    "radiusTo": 0,
+                    "triLength": 46,
+                    "triLengthTo": 46,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 0,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "ignoreSpawnAngle": true,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF5858",
+                    "sides": 3,
+                    "shapes": 4,
+                    "radius": 5,
+                    "radiusTo": 0,
+                    "triLength": 40,
+                    "triLengthTo": 40,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 88,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 271,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 19,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 345,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 156,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 303,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 47,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        },
+        {
+            "type": "BasicBulletType",
+            "angleOffset": 222,
+            "keepVelocity": false,
+            "velocityScale":0
+            "damage": 0,
+            "lifetime": 30,
+            "speed": 0,
+            "velocityScale":0,
+            "rangeOverride": 0,
+            "width": 0,
+            "height": 0,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "hitEffect": "none",
+            "hitSound": "none",
+            "despawnEffect": "none",
+            "collides": false,
+            "absorbable": false,
+            "hittable": false,
+            "parts": [
+                {
+                    "type": "HaloPart",
+                    "x": 0,
+                    "y": 0,
+                    "tri": true,
+                    "hollow": false,
+                    "color": "FF5845",
+                    "colorTo": "FF4242",
+                    "sides": 3,
+                    "shapes": 1,
+                    "radius": 3,
+                    "radiusTo": 0,
+                    "triLength": 36,
+                    "triLengthTo": 36,
+                    "rotateSpeed": 0,
+                    "shapeRotation": 0,
+                    "haloRadius": 0,
+                    "haloRadiusTo": 0,
+                    "haloRotation": 0,
+                    "haloRotateSpeed": 0,
+                    "layer": 110
+                }
+            ]
+        }
+    ]
+}
+}
+}
+{
+      "name": "克苏鲁之眼1",
+      "display": true,
+      "mirror": false,
+      "alternate": false,
+      "rotate": true,
+      "showStatSprite": true,
+      "top": true,
+      "rotateSpeed": 2.4,
+      "reload": 180,
+      "inaccuracy": 0,
+      "shake": 0.0,
+      "recoil": 7,
+      "recoilTime": 150,
+      "shootX": 0.0,
+      "shootY": 15,
+      "x": 0,
+      "y": 0,
+	  "shootSound": "克苏鲁之眼1攻击音效",
+      "shoot": {
+        "type": "ShootPattern",
+        "shots": 2,
+        "shotDelay": 30,
+        "firstShotDelay": 60
+      },
+      "bullet": {
+	        "chargeEffect": {
+			"type": "MultiEffect",
+			"effects": [
+			    {
+					"type": "WaveEffect",
+					"interp": "circleIn",
+					"lifetime": 2,
+					"startDelay": 5,
+					"sizeFrom": 18,
+					"sizeTo": 0,
+					"strokeFrom": 0,
+					"strokeTo": 20,
+					"colorFrom": "FF5845FF",
+					"colorTo": "FF424200"
+				},
+				{
+					"type": "WaveEffect",
+					"interp": "circleIn",
+					"lifetime": 5,
+					"startDelay": 13,
+					"sizeFrom": 12,
+					"sizeTo": 0,
+					"strokeFrom": 0,
+					"strokeTo": 20,
+					"colorFrom": "FF5845FF",
+					"colorTo": "FF424200"
+				},
+				{
+					"type": "WaveEffect",
+					"interp": "circleIn",
+					"lifetime": 10,
+					"startDelay": 20,
+					"sizeFrom": 18,
+					"sizeTo": 0,
+					"strokeFrom": 0,
+					"strokeTo": 20,
+					"colorFrom": "FF5845FF",
+					"colorTo": "FF424200"
+				}
+			]
+		},
+			"type": "PointBulletType",
+			"damage": 26,
+			"hitSound": "DBZ1",
+			"speed": 20,
+			"lifetime":23,
+			"hitShake": 8,
+			"trailSpacing": 4,
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 1,
+				"baseLength": 0,
+				"lifetime": 25,
+				"line": true,
+				"randLength": false,
+				"lenFrom": 3,
+				"lenTo": 3.5,
+				"strokeFrom": 5,
+				"strokeTo": 0,
+				"colorFrom": "FF5845",
+				"colorTo": "FF4242",
+				"cone": 0
+			},
+			"despawnEffect": "none",
+			"shootEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 5,
+						"sizeTo": 20,
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 8,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 32,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242",
+						"cone": 0
+					}
+				]
+			},
+			"smokeEffect": "smokeCloud",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "WaveEffect",
+						"lifetime": 15,
+						"sizeFrom": 0,
+						"sizeTo": 22,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 8,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 55,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242",
+						"cone": 0
+					}
+				]
+			},
+			"fragRandomSpread": 45,
+			"fragBullets": 8,
+			"fragBullet": {
+				"type": "PointBulletType",
+				"trailSpacing": 4,
+				"trailEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"baseLength": 0.1,
+					"length": 0.1,
+					"lifetime": 22,
+					"line": true,
+					"randLength": false,
+					"lenFrom": 4,
+					"lenTo": 4,
+					"strokeFrom": 5,
+					"strokeTo": 0,
+					"colorFrom": "FF5845FF",
+					"colorTo": "FF4242",
+					"cone": 0
+				},
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 6,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 20,
+					"colorFrom": "FF5845FF",
+					"colorTo": "FF4242",
+					"cone": 60
+				},
+				"despawnEffect": {
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 0,
+					"sizeTo": 16,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FF5845FF",
+					"colorTo": "FF4242"
+				},
+				"hitShake": 3,
+				"hitSound": "explosionQuad",
+				"speed": 10,
+				"lifetime": 8,
+				"lightningDamage": 12,
+				"lightning": 2,
+				"lightningLength": 3,
+				"lightningColor": "FF5845FF",
+				"splashDamageRadius": 20,
+				"splashDamage": 12,
+				"fragRandomSpread": 45,
+				"fragBullets": 1,
+				"fragBullet": {
+					"type": "PointBulletType",
+					"trailSpacing": 4,
+					"trailEffect": {
+						"type": "ParticleEffect",
+						"particles": 1,
+						"baseLength": 0.1,
+						"length": 0.1,
+						"lifetime": 22,
+						"line": true,
+						"randLength": false,
+						"lenFrom": 3,
+						"lenTo": 3,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242",
+						"cone": 0
+					},
+					"hitEffect": {
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 7,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 20,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242",
+						"cone": 60
+					},
+					"despawnEffect": {
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 0,
+						"sizeTo": 16,
+						"strokeFrom": 2,
+						"strokeTo": 0,
+						"colorFrom": "FF5845FF",
+						"colorTo": "FF4242"
+					},
+					"hitShake": 3,
+					"hitSound": "explosionQuad",
+					"speed": 10,
+					"lifetime": 8,
+					"lightningDamage": 8,
+					"lightning": 2,
+					"lightningLength": 2,
+					"lightningColor": "FF5845FF",
+					"splashDamageRadius": 35,
+					"splashDamage": 4,
+					"fragRandomSpread": 45,
+					"fragBullets": 1
+				}
+			}
+		},
+      "ejectEffect": "none"
+    },
+    {
+    "name": "克苏鲁之眼3",                  // 武器内部标识名，用于读取贴图
+    "ejectEffect": "none",                  // 弹壳抛出特效
+    "display": true,                        // 是否在单位信息面板显示该武器属性
+    "mirror": false,                         // 是否自动生成左右镜像副武器（双炮管常用）
+    "rotate": false,                        // 武器是否独立朝向目标旋转
+    "baseRotation": 0.0,                   // 武器初始固定旋转角度
+    "top": false,                            // 武器渲染层级在单位主体上层；false则下层
+    "controllable": true,                   // 玩家可以手动操控瞄准开火
+    "aiControllable": true,                 // AI可以自动控制该武器锁定敌人
+    "autoTarget": false,                    // 无玩家操控时自动寻找目标（仅controllable=false生效）
+    "rotateSpeed": 0,                   // 武器旋转角速度：度/tick
+    "reload": 600,                         // 开火冷却时间(tick)
+    "inaccuracy": 0.0,                     // 子弹散射误差（角度）
+    "shake": 0,                          // 开火屏幕震动强度
+    "recoil": 0,                         // 开火视觉后坐力大小
+    "shootX": 0,                         // 子弹生成点X偏移（武器局部坐标系）
+    "shootY": 0,                         // 子弹生成点Y偏移（武器局部坐标系）
+    "x": 0,                              // 武器在单位身上的挂载X位置
+    "y": 0,                              // 武器在单位身上的挂载Y位置
+    "shootCone": 5.0,                      // 开火判定锥形半角，目标进入该角度才能射击
+    "shootSound": "克苏鲁之眼3攻击音效",               // 单次开火音效
+    "shootSoundVolume":5,
+    "bullet":
+    {
+  "type": "BasicBulletType",                      // 子弹基础类型：普通实体弹道子弹
+        "width": 56,
+        "height": 56,
+  "shrinkX": 0,
+  "shrinkY": 0
+  // ============ 基础生命与速度 ============
+  "sprite":"terrariaformindustry-克苏鲁之眼幻影",
+  "lifetime": 110,                               // 默认40tick，子弹存活总时长(1秒=60tick)
+  "speed": 10,                                   // 默认1.0，子弹每tick飞行单位距离
+  "damage": 50,                                  // 默认1.0，直接命中单体伤害
+  "hitSize": 50,                                 // 默认4.0，子弹碰撞命中框大小
+  "pierceArmor": true,                            // 默认false，true无视单位护甲
+  "inaccuracy": 0.0,                              // 默认0，额外角度散布（叠加炮台inaccuracy）
+  "drag": 0.033,                                    // 默认0，空气阻力：每帧按比例减速
+
+  // ============ 穿透相关 ============
+  "pierce": true,                                // 默认false，是否穿透单位
+  "pierceBuilding": true,                        // 默认false，是否穿透建筑方块
+  "laserAbsorb": true,                            // 默认true，激光穿透时是否被塑钢墙阻挡
+  "absorbable": false,
+  "hitEffect": "none",                   // 默认hitBulletSmall，命中目标触发特效
+            "despawnEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 1,
+                        "region": "terrariaformindustry-冲击波3",
+                        "lifetime": 45,
+                        "length": 0,
+                        "baseLength": 0,
+                        "interp": "pow2Out",
+                        "sizeInterp": "pow5Out",
+                        "sizeFrom": 0,
+                        "sizeTo": 64,
+                        "colorFrom": "FF5845FF",
+                        "colorTo": "FF000000"
+                    },
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 1,
+                        "region": "terrariaformindustry-冲击波1",
+                        "lifetime": 60,
+                        "length": 0,
+                        "baseLength": 0,
+                        "interp": "pow2Out",
+                        "sizeInterp": "pow5Out",
+                        "sizeFrom": 0,
+                        "sizeTo": 64,
+                        "colorFrom": "FF5845FF",
+                        "colorTo": "FF000000"
+                    },
+                ]
+            }
+  "shootEffect": "none",                    // 默认shootSmall，发射瞬间特效
+  "chargeEffect": "none",                         // 默认none，长预热首发射击的充能特效
+  "smokeEffect": "none",               // 默认shootSmallSmoke，开火附加烟雾特效
+  "shootSound": "none",                           // 默认none，覆盖炮台开火音效；单位武器无效
+  "hitSound": "none",                             // 默认none，命中/销毁时播放音效
+  "despawnSound": "none",                         // 默认none，寿命结束销毁音效
+  "hitColor": "FFFFFF00",                         // 默认FFFFFFFF，命中/消失特效颜色ARGB
+
+  // ============ 溅射伤害与击退 ============
+  "splashDamage": 30,                            // 默认0，范围溅射伤害，0关闭溅射
+  "splashDamageRadius": 80,                     // 默认-1，溅射半径，负数关闭溅射范围
+  "splashDamagePierce": true,                    // 默认false，true溅射可以穿透墙体
+  "collidesTiles": true,                          // 默认true，是否和地形方块碰撞
+  "collidesTeam": false,                          // 默认false，是否和友方单位/方块碰撞
+  "collidesAir": true,                            // 默认true，碰撞空军单位
+  "collidesGround": true,                         // 默认true，碰撞地面单位
+  "collideFloor": false,                          // 默认false，是否和底层地板(传送带等)碰撞
+  "collideTerrain": false,                        // 默认false，是否和静态墙体地形碰撞
+  "hitUnder": false,                              // 默认false，强制命中下层方块
+
+  // ============ 速度继承（你之前重点用的参数） ============
+  "keepVelocity": false,                           // 默认true，是否继承发射单位/父子弹的移动惯性速度
+  "scaleKeepVelocity": false,                     // 默认false，开启后继承速度会按比例缩短寿命，保证射程不变
+
+  // ============ 防御交互（点防/反射/吸收） ============
+  "hittable": false,                               // 默认true，可以被点防御武器拦截
+  "reflectable": false,                            // 默认true，可以被反射机制反弹
+
+  // ============ 间隔生成子弹 intervalBullet ============
+  "intervalBullet": {
+  "type": "BasicBulletType",                      // 子弹基础类型：普通实体弹道子弹
+        "width": 20,
+        "height": 30,
+  "shrinkX": 0,
+  "shrinkY": 0
+  // ============ 基础生命与速度 ============
+  "sprite":"terrariaformindustry-克苏鲁之仆幻影",
+  "lifetime": 70,                               // 默认40tick，子弹存活总时长(1秒=60tick)
+  "speed": 7,                                   // 默认1.0，子弹每tick飞行单位距离
+  "damage": 25,                                  // 默认1.0，直接命中单体伤害
+  "hitSize": 20,                                 // 默认4.0，子弹碰撞命中框大小
+  "pierceArmor": true,                            // 默认false，true无视单位护甲
+  "inaccuracy": 0.0,                              // 默认0，额外角度散布（叠加炮台inaccuracy）
+  "drag": 0.035,                                    // 默认0，空气阻力：每帧按比例减速
+
+  // ============ 穿透相关 ============
+  "pierce": true,                                // 默认false，是否穿透单位
+  "pierceBuilding": true,                        // 默认false，是否穿透建筑方块
+  "laserAbsorb": true,                            // 默认true，激光穿透时是否被塑钢墙阻挡
+  "absorbable": false,
+  "hitEffect": "none",                   // 默认hitBulletSmall，命中目标触发特效
+            "despawnEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 1,
+                        "region": "terrariaformindustry-冲击波3",
+                        "lifetime": 60,
+                        "length": 0,
+                        "baseLength": 0,
+                        "interp": "pow2Out",
+                        "sizeInterp": "pow5Out",
+                        "sizeFrom": 0,
+                        "sizeTo": 30,
+                        "colorFrom": "FF5845FF",
+                        "colorTo": "FF000000"
+                    },
+                    {
+                        "type": "ParticleEffect",
+                        "particles": 1,
+                        "region": "terrariaformindustry-冲击波1",
+                        "lifetime": 60,
+                        "length": 0,
+                        "baseLength": 0,
+                        "interp": "pow2Out",
+                        "sizeInterp": "pow5Out",
+                        "sizeFrom": 0,
+                        "sizeTo": 30,
+                        "colorFrom": "FF5845FF",
+                        "colorTo": "FF000000"
+                    },
+                ]
+            }
+  "shootEffect": "none",                    // 默认shootSmall，发射瞬间特效
+  "chargeEffect": "none",                         // 默认none，长预热首发射击的充能特效
+  "smokeEffect": "none",               // 默认shootSmallSmoke，开火附加烟雾特效
+  "shootSound": "none",                           // 默认none，覆盖炮台开火音效；单位武器无效
+  "hitSound": "none",                             // 默认none，命中/销毁时播放音效
+  "despawnSound": "none",                         // 默认none，寿命结束销毁音效
+  "hitColor": "FFFFFF00",                         // 默认FFFFFFFF，命中/消失特效颜色ARGB
+
+  // ============ 溅射伤害与击退 ============
+  "splashDamage": 12,                            // 默认0，范围溅射伤害，0关闭溅射
+  "splashDamageRadius": 12,                     // 默认-1，溅射半径，负数关闭溅射范围
+  "splashDamagePierce": true,                    // 默认false，true溅射可以穿透墙体
+  "collidesTiles": true,                          // 默认true，是否和地形方块碰撞
+  "collidesTeam": false,                          // 默认false，是否和友方单位/方块碰撞
+  "collidesAir": true,                            // 默认true，碰撞空军单位
+  "collidesGround": true,                         // 默认true，碰撞地面单位
+  "collideFloor": false,                          // 默认false，是否和底层地板(传送带等)碰撞
+  "collideTerrain": false,                        // 默认false，是否和静态墙体地形碰撞
+  "hitUnder": false,                              // 默认false，强制命中下层方块
+
+  // ============ 速度继承（你之前重点用的参数） ============
+  "keepVelocity": false,                           // 默认true，是否继承发射单位/父子弹的移动惯性速度
+  "scaleKeepVelocity": false,                     // 默认false，开启后继承速度会按比例缩短寿命，保证射程不变
+
+  // ============ 防御交互（点防/反射/吸收） ============
+  "hittable": false,                               // 默认true，可以被点防御武器拦截
+  "reflectable": false,                            // 默认true，可以被反射机制反弹
+  "trailColor": "FF584530",                       // 默认E58956FF，拖尾粒子颜色
+  "trailLength": 18,                              // 默认-1，四边形拖尾长度，≤0关闭硬拖尾
+  "trailWidth": 6,                              // 默认2，硬拖尾宽度
+"frontColor":"FF584599",
+"backColor":"FF000000",
+
+},
+  "bulletInterval": 15,                         // 默认20tick，生成间隔帧数
+  "intervalBullets": 2,                           // 默认1，每次间隔生成子弹数量
+  "intervalRandomSpread": 0,                   // 默认360，间隔子弹随机散布角度
+  "intervalSpread": 45,                           // 默认0，间隔子弹等分角度
+  "intervalAngle": 0.0,                           // 默认0，间隔子弹整体角度偏移
+  "trailColor": "FF584530",                       // 默认E58956FF，拖尾粒子颜色
+  "trailLength": 56,                              // 默认-1，四边形拖尾长度，≤0关闭硬拖尾
+  "trailWidth": 14,                              // 默认2，硬拖尾宽度
+"frontColor":"FF5845FF",
+"backColor":"FF0000FF",
+}
+}
+  ]
+}

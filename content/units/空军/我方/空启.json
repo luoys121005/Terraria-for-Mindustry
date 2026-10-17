@@ -1,0 +1,281 @@
+{
+  "type": "flying",             // 单位类型：飞行单位
+  "name": "空启",       // 单位内部名称
+  "description": "1",            // 单位描述（简短说明）
+  "speed": 3,                   // 单位移动速度
+  "rotateSpeed": 3.5,           // 单位自身旋转速度
+  "flying": true,               // 是否为飞行单位
+  "health": 300,                // 生命值
+  "armor": 5,                   // 护甲（减伤）
+  "hitSize": 18,                // 单位碰撞体积大小
+  "engineOffset": 11,           // 引擎特效偏移位置
+  "engineSize": 3.5,            // 引擎特效大小
+  "weapons": [
+    {
+      "name": "空启1",  // 武器1名称
+      "range": 169,             // 射击范围
+      "reload": 60,             // 射击冷却时间（帧）
+      "x": 0,                   // 武器相对X坐标
+      "y": 0,                   // 武器相对Y坐标
+      "rotate": true,           // 武器是否跟随目标旋转
+      "rotateSpeed": 3,         // 武器转头速度
+      "inaccuracy": 0,          // 射击散布误差
+      "shootCone": 300,         // 射击角度范围（度）
+      "shootSound": "pew",      // 射击音效
+      "mirror": false,          // 是否镜像生成另一侧武器
+      "ejectEffect": "casing1", // 抛壳特效
+      "bullet": {
+        "type": "BasicBulletType",    // 子弹类型：基础子弹
+        "damage": 15,                // 直接伤害
+        "splashDamageRadius": 8,     // 溅射伤害半径
+        "splashDamage": 13,          // 溅射伤害
+        "frontColor": "92ABFFFF",    // 子弹前部颜色
+        "backColor": "92ABFFFF",     // 子弹后部颜色
+        "speed": 5,                  // 子弹飞行速度
+        "lifetime": 45,              // 子弹存在时间（帧）
+        "width": 24,                 // 子弹宽度
+        "height": 24,                // 子弹高度
+        "shrinkX": 0,                // 子弹宽度随时间缩小
+        "shrinkY": 0,                // 子弹高度随时间缩小
+        "pierceCap": 3,              // 最大穿透目标数
+        "lightning": 8,              // 连锁闪电数量
+        "lightningLength": 7,        // 闪电链长度
+        "lightningDamage": 10,       // 闪电伤害
+        "homingPower": 0.3,          // 追踪力度
+        "homingRange": 80,           // 追踪有效距离
+        "status": "electrified",     // 附加效果：麻痹/触电
+        "statusDuration": 400,       // 效果持续时间（帧）
+        "pierce": true,              // 是否可穿透
+        "trailLength": 10,           // 拖尾长度
+        "trailWidth": 4,             // 拖尾宽度
+        "trailColor": "92ABFFFF",    // 拖尾颜色
+        "despawnEffect": "bigShockwave", // 消失特效
+        "hitShake": 3,               // 命中屏幕震动
+        "bulletInterval": 3,         // 连发子弹间隔帧
+        "intervalBullets": 2,        // 连发子弹数量
+        "intervalSpread": 10,        // 连发子弹散射角度
+        "intervalBullet": {          // 连发次级子弹配置
+          "type": "LightningBulletType",  // 子弹类型：闪电弹
+          "damage": 2,                    // 次级子弹伤害
+          "lightningColor": "92ABFFFF",   // 闪电颜色
+          "hitColor": "92ABFFFF",         // 命中颜色
+          "lightningLength": 5.5,         // 闪电长度
+          "lightningLengthRand": 3,       // 闪电长度随机值
+          "hitEffect": "hitLancer",       // 命中特效
+          "despawnEffect": "none"         // 消失特效：无
+        },
+        "shootEffect": {  // 射击特效组合
+          "type": "multiEffect",
+          "effects": [
+            {
+              "type": "ParticleEffect",  // 粒子特效
+              "particles": 6,            // 粒子数量
+              "sizeFrom": 8,             // 初始大小
+              "sizeTo": 0,               // 结束大小
+              "length": 40,              // 粒子长度
+              "lifetime": 15,            // 存在时间
+              "interp": "sineOut",       // 插值曲线
+              "sizeInterp": "sineIn",    // 大小变化曲线
+              "colorFrom": "92ABFFFF",   // 起始颜色
+              "colorTo": "92ABFFFF",     // 结束颜色
+              "cone": 17                 // 粒子扩散角度
+            },
+            {
+              "type": "WaveEffect",      // 冲击波特效
+              "lifetime": 15,            // 存在时间
+              "sides": 0,                // 边数（0=圆形）
+              "sizeFrom": 0,             // 初始大小
+              "sizeTo": 15,              // 结束大小
+              "strokeFrom": 4,           // 初始线条宽度
+              "strokeTo": 0,             // 结束线条宽度
+              "colorFrom": "92ABFFFF",   // 起始颜色
+              "colorTo": "92ABFFFF"      // 结束颜色
+            }
+          ]
+        },
+        "hitEffect": {  // 命中特效组合
+          "type": "multiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 25,
+              "sizeFrom": 0,
+              "sizeTo": 35,
+              "strokeFrom": 6,
+              "strokeTo": 0,
+              "lightColor": "92ABFFFF",
+              "colorFrom": "92ABFFFF",
+              "colorTo": "92ABFFFF"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 12,
+              "sizeFrom": 6,
+              "sizeTo": 0,
+              "length": 55,
+              "lifetime": 40,
+              "interp": "sineOut",
+              "sizeInterp": "sineIn",
+              "colorFrom": "92ABFFFF",
+              "colorTo": "92ABFFFF",
+              "cone": 360
+            },
+            {
+              "type": "ParticleEffect",
+              "line": true,
+              "particles": 10,
+              "lifetime": 25,
+              "length": 55,
+              "baseLength": 8,
+              "cone": -360,
+              "lenFrom": 5,
+              "lenTo": 0,
+              "interp": "exp10In",
+              "colorFrom": "92ABFFFF",
+              "colorTo": "92ABFFFF"
+            },
+            {
+              "type": "ParticleEffect",
+              "particles": 1,
+              "sizeFrom": 60,
+              "sizeTo": 0,
+              "length": 0,
+              "interp": "bounceOut",
+              "lifetime": 50,
+              "region": "terrariaformindustry-爆炸1", // 自定义贴图
+              "lightColor": "58E4F5",
+              "colorFrom": "58E4F5",
+              "colorTo": "92ABFFFF",
+              "layer": 110  // 渲染层级
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "空启2",        // 武器2名称
+      "x": 8,                         // 武器相对X坐标
+      "y": 8,                         // 武器相对Y坐标
+      "rotate": true,                 // 武器是否旋转瞄准
+      "mirror": true,                 // 自动镜像生成对称武器
+      "range": 149,                   // 射击范围
+      "reload": 90,                   // 射击冷却时间（帧）
+      "inaccuracy": 0,                // 射击散布误差
+      "rotateSpeed": 5.5,             // 武器旋转速度
+      "shoot": {                      // 高级射击模式
+        "shoots": 2,                  // 一次发射次数
+        "shootDelay": 0,              // 发射延迟
+        "type": "ShootMulti",         // 多目标/多发射类型
+        "source": {
+          "type": "ShootHelix",       // 发射轨迹：螺旋
+          "scl": 2,                   // 螺旋缩放比例
+          "mag": 2                  // 螺旋幅度
+        },
+        "dest": [
+          {
+            "type": "ShootHelix",
+            "scl": 2,
+            "mag": 0.8
+          }
+        ]
+      },
+      "bullet": {
+        "damage": 10,                // 直接伤害
+        "lifetime": 25,            // 子弹存在时间
+        "speed": 8,                  // 子弹速度
+        "shrinkY": 5,                // 高度随时间缩小
+        "height": 8,                 // 子弹高度
+        "width": 5,                  // 子弹宽度
+        "frontColor": "FFB366FF",    // 前部颜色
+        "backColor": "FFB366FF",     // 后部颜色
+        "pierce": true,              // 是否可穿透
+        "pierceCap": 1,              // 最大穿透数
+        "status": "electrified",     // 附加触电效果
+        "statusDuration": 200,       // 效果持续帧
+        "trailColor": "FFB366FF",    // 拖尾颜色
+        "trailLength": 12,           // 拖尾长度
+        "trailWidth": 1.5,           // 拖尾宽度
+        "trailSinScl": 0.5,          // 拖尾正弦波动比例
+        "trailSinMag": 1.1,          // 拖尾正弦波动幅度
+        "hitShake": 1,               // 命中震动
+        "knockback": 3,              // 击退力度
+        "homingPower": 0.04,         // 追踪力度
+        "homingRange": 80,           // 追踪范围
+        "shootEffect": {  // 射击特效
+          "type": "multiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 15,
+              "sizeFrom": 0,
+              "sizeTo": 20,
+              "strokeFrom": 4,
+              "strokeTo": 0,
+              "lightColor": "FFB366FF",
+              "colorFrom": "FFB366FF",
+              "colorTo": "FFB366FF"
+            },
+            {
+              "type": "ParticleEffect",
+              "line": true,
+              "particles": 3,
+              "lifetime": 15,
+              "length": 40,
+              "baseLength": 6,
+              "cone": -360,
+              "lenFrom": 3.5,
+              "lenTo": 0,
+              "interp": "exp10In",
+              "colorFrom": "FFB366FF",
+              "colorTo": "FFB366FF"
+            }
+          ]
+        },
+        "hitEffect": {  // 命中特效
+          "type": "multiEffect",
+          "effects": [
+            {
+              "type": "WaveEffect",
+              "lifetime": 20,
+              "sizeFrom": 0,
+              "sizeTo": 30,
+              "strokeFrom": 2,
+              "strokeTo": 0,
+              "lightColor": "FFB366FF",
+              "colorFrom": "FFB366FF",
+              "colorTo": "FFB366FF"
+            },
+            {
+              "type": "ParticleEffect",
+              "line": true,
+              "particles": 4,
+              "lifetime": 30,
+              "length": 30,
+              "baseLength": 20,
+              "cone": -360,
+              "lenFrom": 4,
+              "lenTo": 0,
+              "interp": "exp10In",
+              "colorFrom": "FFB366FF",
+              "colorTo": "FFB366FF"
+            }
+          ]
+        },
+        "lightning": 3,               // 闪电链数量
+        "lightningDamage": 5,         // 闪电伤害
+        "lightningColor": "FFB366FF", // 闪电颜色
+        "lightningCone": 60,          // 闪电扩散角度
+        "lightningLength": 5,         // 闪电长度
+        "lightningLengthRand": 0      // 闪电长度随机值
+      }
+    }
+  ],
+  "research": {
+    // 父节点科技
+    "parent": "空启初级重构厂",
+    // 研究该科技需要的材料
+    "requirements": [
+      "魔金/25"
+    ]
+  }
+}

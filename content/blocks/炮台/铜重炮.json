@@ -1,0 +1,97 @@
+{
+    "type": "ItemTurret",
+    "name": "铜重炮",
+    "localizedName": "铜重炮",
+    "description": "发射大型炮弹，爆炸后分裂爆炸小子弹",
+    "category": "turret",
+    "size": 2,
+    "health": 300,
+    "reload": 21,
+    "range": 220,
+    "rotateSpeed": 2,
+    "recoil": 3,
+    "requirements":[
+        "铜锭/30"
+    ],
+    "shootSound": "sauron",
+    "hasPower": false,
+    "targetAir": true,
+    "targetGround": true,
+    "buildTime": 200,
+    "ammoTypes": {
+        "铜锭": {
+            "type": "BasicBulletType",
+            "width": 12,
+            "height": 16,
+            "speed": 4,
+            "lifetime": 60,
+            "damage": 9,
+            "sprite": "large-orb",
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    "shootTitan",
+                    {
+                        "type": "WaveEffect",
+                        "colorTo": "E8E4DFFF",
+                        "sizeTo": 26,
+                        "lifetime": 14,
+                        "strokeFrom": 4
+                    }
+                ]
+            },
+            "smokeEffect": "shootSmokeTitan",
+            "trailEffect": "missileTrail",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "E8E4DFFF",
+                "smokeColor": "808080FF",
+                "sparkColor": "5E8C31FF",
+                "waveStroke": 4,
+                "waveRad": 40
+            },
+            "despawnEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "E8E4DFFF",
+                "smokeColor": "808080FF",
+                "sparkColor": "5E8C31FF",
+                "waveStroke": 4,
+                "waveRad": 40
+            },
+            "despawnSound": "explosionAfflict",
+            "shootSound": "shootAfflict",
+            "explosive": true,
+            "explodeRadius": 24,
+            "explodeDamage": 9,
+            "fragBullets": 10,
+            "fragBullet": {
+                "type": "BasicBulletType",
+                "speed": 4,
+                "lifetime": 6,
+                "damage": 4.5,
+                "width": 6,
+                "height": 6,
+                "color": "7CF389FF",
+                "lightColor": "7CF38970",
+                "explosive": true,
+                "explodeRadius": 8,
+                "explodeDamage": 35,
+                "hitEffect": "explosion",
+                "despawnEffect": "explosion",
+                "homing": true,
+                "homingDelay": 10,
+                "homingPower": 0.08,
+                "homingRange": 120
+            },
+            "ammoMultiplier": 5
+        }
+    },
+    "shootX": 0,
+    "shootY": 6,
+    "research": {
+        "parent": "铜短炮",
+        "requirements": [
+            "铜锭/75"
+        ]
+    }
+}

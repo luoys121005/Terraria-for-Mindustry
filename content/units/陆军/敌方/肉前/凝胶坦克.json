@@ -1,0 +1,49 @@
+{
+  "type": "tank",
+  "name": "凝胶坦克",
+	"template":"ErekirUnitType",
+	"treadRects":[
+	{"x":17,"y":-47,
+	"width":21,"height":57
+	}	],
+  "hitSize": 16,
+  "treadPullOffset": 3,
+	"singleTarget":false,
+  "speed": 0.48,
+  "health": 25,
+  "armor": 2,
+  "crushDamage": 0.25,
+  "rotateSpeed": 1,
+  "floorMultiplier": 0.3,
+  "treadFrames": 14,
+  "tankMoveVolume": 1,
+  "tankMoveSound": "tankMoveSmall",
+  "targetAir": true,
+  "squareShape": true,
+  "omniMovement": false,
+  "rotateMoveFirst": true,
+  "weapons": [
+    {
+      "name": "凝胶坦克1",
+      "shootSound": "shootAvert",
+      "reload": 60,
+      "shootY": 3,
+      "recoil": 2,
+      "rotate": true,
+      "rotateSpeed":3,
+      "mirror": true,
+      "x": -10,
+      "y": 0,
+      "bullet": {
+        "type": "LaserBulletType",
+        "damage": 7,
+        "length": 40,
+        "lifetime": 35.0,
+        "hitSize": 6.0,
+        "pierce": false,
+        "pierceBuilding": false,
+        "toColor": "4782FFFF"
+      }
+    }
+  ]
+}

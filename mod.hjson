@@ -1,0 +1,24 @@
+#the mod name as displayed in-game
+displayName: "泰拉世纪工厂"
+
+#the internal name of your mod
+name: "terrariaformindustry"
+
+#your name
+author: "万象终极无尽星空(B站)"
+
+#the fully qualified main class of the mod
+main: "MultiCraft.MultiCrafterMod"
+
+#the mod description as seen in the mod dialog
+description: "将泰拉瑞亚转化成像素工厂"
+
+#the mod version
+version: v0.0.0.0.1
+
+#the minimum game build required to run this mod
+minGameVersion: 160.7
+
+#this is a java mod
+java: true
+

@@ -1,0 +1,107 @@
+{
+  "type": "MultiCraft.MultiCrafter",
+  "name": "熔炉",
+  "localizedName": "熔炉",
+  "description": "熔炼基础的矿物",
+  "size": 3,
+  "health": 90,
+  "itemCapacity": 1000,
+  "research": "天启核心",
+  "requirements": [
+    { "item": "石头", "amount": 20 }
+  ],
+  "category": "crafting",
+  "drawer": { "type": "DrawDefault" },
+  "recipe": [
+    {
+      "inputItems": [
+        { "item": "铜矿", "amount": 3 }
+      ],
+      "outputItems": [
+        { "item": "铜锭", "amount": 1 }
+      ],
+      "craftTime": 3
+    },
+    {
+      "inputItems": [
+        { "item": "锡矿", "amount": 3 }
+      ],
+      "outputItems": [
+        { "item": "锡锭", "amount": 1 }
+      ],
+      "craftTime": 3
+    },
+    {
+      "inputItems": [
+        { "item": "铁矿", "amount": 3 }
+      ],
+      "outputItems": [
+        { "item": "铁锭", "amount": 1 }
+      ],
+      "craftTime": 3
+    },
+    {
+      "inputItems": [
+        { "item": "铅矿", "amount": 3 }
+      ],
+      "outputItems": [
+        { "item": "铅锭", "amount": 1 }
+      ],
+      "craftTime": 3
+    },
+    {
+      "inputItems": [
+        { "item": "银矿", "amount": 4 }
+      ],
+      "outputItems": [
+        { "item": "银锭", "amount": 1 }
+      ],
+      "craftTime": 4
+    },
+    {
+      "inputItems": [
+        { "item": "钨矿", "amount": 4 }
+      ],
+      "outputItems": [
+        { "item": "钨锭", "amount": 1 }
+      ],
+      "craftTime": 4
+    },
+    {
+      "inputItems": [
+        { "item": "金矿", "amount": 4 }
+      ],
+      "outputItems": [
+        { "item": "金锭", "amount": 1 }
+      ],
+      "craftTime": 4
+    },
+    {
+      "inputItems": [
+        { "item": "铂金矿", "amount": 4 }
+      ],
+      "outputItems": [
+        { "item": "铂金锭", "amount": 1 }
+      ],
+      "craftTime": 4
+    },
+    {
+      "inputItems": [
+        { "item": "魔矿", "amount": 3 }
+      ],
+      "outputItems": [
+        { "item": "魔锭", "amount": 1 }
+      ],
+      "craftTime": 3
+    },
+    {
+      "inputItems": [
+        { "item": "猩红矿", "amount": 3 }
+      ],
+      "outputItems": [
+        { "item": "猩红锭", "amount": 1 }
+      ],
+      "craftTime": 3
+    }
+  ]
+}

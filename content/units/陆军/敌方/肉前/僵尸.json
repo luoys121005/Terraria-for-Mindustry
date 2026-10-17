@@ -1,0 +1,80 @@
+{
+  "type": "mech",
+  "name": "僵尸",
+  "description": "双炮喷火的敌方陆军单位",
+  "health": 45,
+  "speed": 0.38,
+  "hitSize": 24,
+  "armor": 6,
+  "flying": false,
+  "targetAir": true,
+  "targetGround": true,
+  "rotateSpeed": 1.75,
+  "weapons": [
+    {
+      "name": "僵尸1",
+      "shootSound": "shootFlame",
+      "rotationLimit":72,
+      "x": -17,
+      "y": 0,
+      "shootY": 14,
+      "shootX":-1.5,
+      "reload": 12,
+      "top": true,
+  "rotateSpeed": 2.2,
+      "recoil": 0.3,
+      "rotate": true,
+      "mirror": true,
+      "inaccuracy": 0,
+      "bullet": {
+        "type": "RailBulletType",
+            "length": 88,
+            "lifetime": 1,
+        "damage": 10,
+        "speed": 0,
+        "lifetime": 0,
+        "pierce": false,
+        "color": "D1D68A00",
+    	"shootEffect": {
+          "type":"MultiEffect",
+          "effects":
+          [
+            {
+				"type": "ParticleEffect",
+				"particles": 32,
+				"lifetime": 25,
+				"sizeFrom": 2.3,
+				"sizeTo": 0,
+				"interp": "pow5Out",
+				"sizeInterp": "pow10In",
+				"length": 88,
+				"baseLength": 0,
+				"colorFrom": "D1D68AFF",
+				"colorTo": "D1D68A86",
+				"cone": 15
+			  },
+              {
+				"type": "ParticleEffect",
+				"particles": 10,
+				"lifetime": 25,
+				"sizeFrom": 1.6,
+				"sizeTo": 0,
+				"interp": "pow5Out",
+				"sizeInterp": "pow10In",
+				"length": 78,
+				"baseLength": 0,
+				"colorFrom": "757575FF",
+				"colorTo": "757575FF",
+				"cone": 12
+			  }
+		    ]
+		},
+		"despawnEffect": "none",
+        "collidesAir": true,
+        "collidesGround": true,
+        "keepVelocity": false
+      }
+    }
+  ],
+  "shootSound": "shootFlame"
+}

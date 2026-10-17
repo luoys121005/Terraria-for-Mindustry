@@ -1,0 +1,49 @@
+{
+    "type": "ItemTurret",
+    "name": "铅风",
+    "description": "两门大炮管快速射出子弹",
+    "size": 2,
+    "health": 40,
+    "reload": 11,
+    "range": 200,
+    "inaccuracy": 0,
+    "buildTime": 100,
+    "recoil": 3,
+    "recoilTime": 5,
+    "category": "turret",
+    "rotateSpeed": 3,
+    "requirements": [
+        {"item": "铅锭", "amount": 45}
+    ],
+    "shootSound": "shootDuo",
+    "shoot": {
+        "type": "ShootAlternate",
+        "shots": 2,
+        "shotDelay":5.5
+    },
+    "ammoTypes": {
+        "铅锭": {
+            "type": "BasicBulletType",
+            "speed": 12.5,
+            "damage": 2.5,
+            "hitSize": 4.8,
+            "lifetime": 20,
+            "width": 10,
+            "height": 18,
+            "shrinkX":0,
+            "shrinkY":0,
+            "shootEffect": "shootSmall",
+            "hitEffect": "hitBulletColor",
+            "despawnEffect": "hitBulletColor",
+            "backColor": "688C96FF",
+            "frontColor": "B5B6BBFF",
+            "trailColor": "3E5272FF"
+        }
+    },
+    "research": {
+        "parent": "铅机炮",
+        "requirements": [
+            "铅锭/85"
+        ]
+    }
+}

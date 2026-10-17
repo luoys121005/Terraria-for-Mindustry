@@ -1,0 +1,49 @@
+{
+    "type": "ItemTurret",
+    "name": "铅机炮",
+    "description": "两门套管轮番射出子弹",
+    "size": 1,
+    "health": 300,
+    "reload": 12,
+    "range": 160,
+    "inaccuracy": 0,
+    "buildTime": 100,
+    "recoil": 3,
+    "recoilTime": 5,
+    "category": "turret",
+    "rotateSpeed": 3,
+    "requirements": [
+        {"item": "铅锭", "amount": 20}
+    ],
+    "shootSound": "shootDuo",
+    "shoot": {
+        "type": "ShootAlternate",
+        "shots": 2,
+        "burstSpacing": 0,
+        "barrelSpacing":3
+    },
+    "limitRange": true,
+    "ammoTypes": {
+        "铅锭": {
+            "type": "BasicBulletType",
+            "speed": 10,
+            "damage": 9,
+            "hitSize": 4.8,
+            "lifetime": 20,
+            "width": 6,
+            "height": 10,
+            "shootEffect": "shootSmall",
+            "hitEffect": "hitBulletColor",
+            "despawnEffect": "hitBulletColor",
+            "backColor": "688C96FF",
+            "frontColor": "B5B6BBFF",
+            "trailColor": "3E5272FF"
+        }
+    },
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "铅锭/65"
+        ]
+    }
+}

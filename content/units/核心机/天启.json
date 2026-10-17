@@ -1,0 +1,200 @@
+    {
+    "type": "flying",
+    "name": "天启",
+    "localizedName": "天启",
+    "description": "初见！——[red]泰拉大陆!!!!!",
+    "flying": true,                  // 是否为飞行单位
+    "lowAltitude": true,             // 低空模式，渲染层级降低，绘制在特效下方
+    "mineSpeed": 1,                // 挖矿速度倍率
+    "mineTier": 1,                   // 挖矿等级1：只能挖硬度1矿石（铜、铅）
+    "buildSpeed": 1,               // 建造速度倍率
+    "targetGround":true,
+    "targetAir":true,
+    "speed": 3.5,                    // 移动速度
+    "rotateSpeed": 12,             // 机身旋转速度（度每tick）
+    "itemCapacity": 1000,              // 背包可携带物品数量
+    "health": 20,                 // 最大生命值
+    "engineOffset": 13,             // 引擎火光向后偏移距离
+    "engineSize": 4,
+    "hitSize": 24,                  // 碰撞盒大小
+    "weapons": [
+        {
+            "name": "天启1",
+            "reload": 15,           // 攻击间隔（tick）
+            "x": 7.75,                // 炮台X偏移
+            "y": -5.75,                 // 炮台Y偏移
+            "top": true,             // 是否绘制在单位贴图上层
+            "shootX":0,      // ✅在这里！武器块，炮口横向偏移
+        "shootY":5.5,    // ✅在这里！武器块，炮口向前伸出4.5单位
+      "shoot": {
+        "shotDelay": 18,
+      },
+            "shootSound": "shootAlpha",// 开火音效（mod需要注册该音效，原版不存在）
+            "bullet": {
+    // ========== BasicBulletType 专属渲染参数 ==========
+    "sprite":"terrariaformindustry-天启1子弹",
+    "type": "BasicBulletType",
+    "backColor": "ffd27e",     // 子弹底色
+    "frontColor": "ffffffff",    // 子弹前景色
+    "width": 8,                // 子弹宽度
+    "height": 13,               // 子弹长度
+    "shrinkY": 0.1,              // X轴收缩比例
+    "shrinkX": 0.6,              // Y轴收缩比例
+    "lifetime": 55,                // 子弹存活时间(tick)
+    "speed": 0.25,                    // 子弹飞行速度(单位/tick)
+    "keepVelocity": false,
+    "drag": -0.08,
+    "damage": 3,                   // 基础直接伤害
+    "hitSize": 6,                  // 子弹碰撞判定大小
+    "pierce": true,                 // 是否穿透单位
+    "pierceBuilding": false,         // 是否穿透建筑
+    "laserAbsorb": true,             // 是否被塑钢墙吸收（激光类生效）
+    "hitEffect": "none",   // 命中特效            
+    "shootEffect": {
+                "type": "MultiEffect",
+                "cone": 0,
+                "followParent" : false,
+                "rotWithParent" : false,
+                "effects": [
+                    {
+                        "type": "WaveEffect",
+                        "lifetime": 18,
+                        "interp": "circleOut",
+                        "sizeFrom": 7.5,
+                        "sizeTo": 0,
+                        "strokeFrom": 3,
+                        "strokeTo": 0,
+                        "colorFrom": "ffd27e",
+                        "colorTo": "ffd27e",
+                        "lightColor": "ffd27e"
+                    }
+                ]
+            }
+			"smokeEffect": {
+				"type": "ParticleEffect",
+				"particles": 7,
+				"line": true,
+				"strokeFrom": 1.8,
+				"strokeTo": 0,
+				"lenFrom": 12,
+				"lenTo": 4,
+				"length": 24,
+				"baseLength": 0,
+				"lifetime": 18,
+				"colorFrom": "FFFFFF",
+				"colorTo": "ffd27e",
+				"cone": 10
+			},
+              "despawnEffect":
+              {
+                "type":"ExplosionEffect",
+                "lifetime":25,
+                "waveStroke":4,
+                "waveColor":"ffd27e",
+                "sparkColor":"ffd27e",
+                "waveRad":10,
+                "smokeSize":2,
+                "smokes":6,
+                "smokeSizeBase":0,
+                "smokeColor":"ffd27e",
+                "sparks":5,
+                "sparkRad":10,
+                "sparkLen":3,
+                "sparkStroke":1.5
+              }
+    "hittable": true,                // 是否能被防空拦截
+    "reflectable": true,             // 是否能被护盾反射
+    "absorbable": true,              // 是否能被护盾吸收
+
+    // ========== 尾迹特效 ==========
+    "trailColor": "FFC869FF",        // 子弹尾迹颜色
+    "trailLength": 4.5,               // 尾迹线段长度，负数关闭
+    "trailWidth": 1.5,               // 尾迹宽度
+}
+        },
+        {
+            "name": "天启2",
+            "reload": 20,           // 攻击间隔（tick）
+            "x": 5.25,                // 炮台X偏移
+            "y": 4.75,                 // 炮台Y偏移
+            "top": true,             // 是否绘制在单位贴图上层
+            "shootSound": "shootAlpha",// 开火音效（mod需要注册该音效，原版不存在）
+            "bullet": {
+  "type": "BasicBulletType",
+  "speed": 3.5,
+  "damage": 2,
+  "scaleKeepVelocity": true,
+  "width": 6,
+  "height": 10,
+  "hitEffect": "hitBulletColor",
+  "despawnEffect": "hitBulletColor",
+  "trailWidth": 1.2,
+  "trailLength": 4,
+  "shootEffect": "shootSmallColor",
+  "smokeEffect": "hitLaserColor",
+  "backColor": "ffd27e",
+  "trailColor": "ffd27e",
+  "hitColor": "ffd27e",
+  "frontColor": "ffffff",
+  "lightColor": "ffd27e",
+  "lifetime": 45,
+}
+
+        },
+        {
+            "name": "天启3",
+            "reload": 100,           // 攻击间隔（tick）
+            "x": 10.75,                // 炮台X偏移
+            "y": 1.75,                 // 炮台Y偏移
+            "top": true,
+            "shootSound": "shootMissile",// 开火音效（mod需要注册该音效，原版不存在）
+            "shoot": {
+  "type": "barrel",          // 对应Java: ShootBarrel
+  "shots": 4,                // 每根炮管一次发射4发
+  "shotDelay": 15             // 同炮管连续发射间隔(帧)
+}
+
+            "bullet": {
+                "type":"BasicBulletType",
+                "sprite":"missile",
+                "weaveScale": 5,
+                "weaveMag": 6.5,
+              "speed": 2.4,
+    "keepVelocity": false,
+              "damage": 3,
+              "width": 10,
+              "height": 10,
+              "shrinkY": 0,
+              "shrinkX": 0,
+              "lifetime": 50,
+              "weaveRandom": false,
+              "hitSize": 5,
+              "pierce": false,
+              "showStats": false,
+              "pierceBuilding": true,
+              "hitColor": "FFCAA8FF",
+              "backColor": "FFCAA8FF",
+              "frontColor": "FF9540FF",
+              "splashDamage": 1,
+              "splashDamageRadius": 7,
+              "despawnEffect":"blastExplosion",
+              "hitEffect":"blastExplosion",
+          "trailColor": "FF9540FF",
+          "trailWidth": 1.5,
+          "trailLength": 17,
+            "trailInterval": 6,
+            "trailEffect": {
+              "type": "ParticleEffect",
+              "particles": 1
+              "length": 0,
+              "lifetime": 25,
+              "sizeFrom": 4,
+              "sizeTo": 0,
+              "region": "terrariaformindustry-粒子特效1",
+              "colorFrom": "FF9540FF",
+              "colorTo": "FFCAA8FF"
+            }
+            }
+        }
+    ]
+}

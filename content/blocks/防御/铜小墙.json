@@ -1,0 +1,17 @@
+{
+  "type": "Wall",
+  "name": "铜小墙",
+  "localizedName": "铜小墙",
+  "description": "最基础的墙",
+  "size": 1,
+  "health": 50,
+  "buildTime": 100,
+  "requirements": ["铜锭/1"],
+  "category": "defense",
+    "research": {
+        "parent": "天启核心",
+        "requirements": [
+            "铜锭/6"
+        ]
+    }
+}

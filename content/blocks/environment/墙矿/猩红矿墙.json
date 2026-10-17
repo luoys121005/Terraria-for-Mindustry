@@ -1,0 +1,12 @@
+{
+    "name": "腥红矿墙",
+    "wallOre": true,
+    "type": "OreBlock",
+    "playerUnmineable": true,
+    "itemDrop": "猩红矿",
+    "mapColor": "B5C2D9FF",
+    "useColor": true,
+    "oreDefault": true,
+    "oreThreshold": 3,
+    "oreScale": 20
+}

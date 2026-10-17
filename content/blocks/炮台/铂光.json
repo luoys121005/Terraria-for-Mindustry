@@ -1,0 +1,60 @@
+{
+    "type": "ItemTurret",
+    "name": "铂光",
+    "localizedName": "铂光",
+    "description": "超快的射出激光",
+    "outlineWidth": 0.01,
+    "category": "turret",
+    "range": 140,
+    "requirements":[
+        "铂金锭/20"
+    ],
+    "ammoTypes":{
+    "铂金锭":
+        {
+  "type": "LaserBulletType",
+  // 激光三层颜色数组：[底层颜色,中层颜色,核心高亮颜色]，大写不带#
+  "color": "A9D8FF66",
+  // 激光总长度
+  "length": 140.0,
+  "shootSound": "shootLancer",
+  // 激光基础宽度
+  "width": 12.0,
+  // 激光末端衰减系数，数值越大末端收缩越明显
+  "lengthFalloff": 0.4,
+  // 激光侧边附属光束长度
+  "sideLength": 8,
+  // 侧边光束宽度
+  "sideWidth": 3,
+  // 侧边光束与主激光的夹角
+  "sideAngle": 45,
+
+  // ========== BulletType 继承通用基础字段（激光子弹通用必备） ==========
+  "damage": 13.0,          // 单次激光伤害
+  "lifetime": 16,      // 激光存在帧数
+  "pierce": false,         // 是否穿透多个目标
+  "hitBuilding": true,    // 是否可以攻击建筑
+  "hitAir": true,         // 是否锁定空中单位
+  "hitGround": true,      // 是否锁定地面单位
+  "knockback": 0,       // 击退力度
+  "shootEffect": "none",// 开火特效
+  "hitEffect": "hitLancer",// 命中特效
+  "smokeEffect":"none",
+}
+
+    },
+    "recoil": 0.5,
+    "shootY": 3,
+    "reload": 10,
+    "shootCone": 15.0,
+    "health": 20,
+    "inaccuracy": 0,
+    "rotateSpeed": 3,
+    "buildTime": 100,
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "铂金锭/50"
+        ]
+    }
+}

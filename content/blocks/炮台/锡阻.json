@@ -1,0 +1,56 @@
+{
+    "type": "ItemTurret",
+    "name": "锡阻",
+    "localizedName": "锡阻",
+    "description": "发射一道刺弹",
+    "outlineWidth": 0.1,
+    "category": "turret",
+    "requirements":[
+        "锡锭/15"
+    ],
+    "ammoTypes":{
+        "锡锭":
+            {
+    "type": "ShrapnelBulletType",
+    "damage": 25,                // 光束基础伤害
+    "speed": 0,                  // 光束无移动速度，固定长度射线
+    "lifetime": 12,              // 光束持续帧数（60帧=1秒）
+    "length": 100.0,             // 光束最大射程长度
+    "width": 10.0,               // 光束主体宽度
+    "fromColor": "ffffffff",     // 光束起点颜色（RGBA十六进制）
+    "toColor": "a9d8ffff",       // 光束末端颜色（RGBA十六进制）
+    "serrations": 5,             // 光束边缘锯齿数量
+    "serrationLenScl": 5,     // 锯齿长度缩放系数
+    "serrationWidth": 2,       // 锯齿宽度
+    "serrationSpacing": 4,     // 锯齿之间间距
+    "serrationSpaceOffset": 40,// 锯齿起始偏移距离（从发射点开始）
+    "serrationFadeOffset": 0.8,  // 锯齿淡化偏移，控制锯齿末端透明度衰减
+
+    // ===== BulletType 父类通用常用参数（可按需删减）=====
+    "pierce": true,              // 是否穿透敌人
+    "collidesAir": true,         // 是否可以击中空中单位
+    "collidesGround": true,      // 是否可以击中地面单位
+}
+    },
+    "shoot": {
+        "type": "Shoot",
+        "shots": 1
+    },
+    "shootSound": "shootDuo",
+    "recoil": 0.5,
+    "shootY": 8,
+    "reload": 12,
+    "buildTime": 100,
+    "range": 60,
+    "shootCone": 15.0,
+    "ammoUseEffect": "casing1",
+    "health": 100,
+    "inaccuracy": 2.0,
+    "rotateSpeed": 10.0,
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "锡锭/50"
+        ]
+    }
+}

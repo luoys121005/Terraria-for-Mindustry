@@ -1,0 +1,26 @@
+{
+    "type": "CoreBlock",
+    "name": "天启核心",
+    "localizedName": "天启核心",
+    "description": "",
+    "size": 6,
+    "health": 3200,
+    "itemCapacity": 10000,
+    "buildTime": 600,
+    "requirements": [
+        { "item": "铜锭", "amount": 100 }
+    ],
+    "alwaysUnlocked": true,
+    "category": "effect",
+    "isFirstTier": true,
+    "allowSpawn": true,
+    "requiresCoreZone": false,
+    "incinerateNonBuildable": false,
+    "unitType": "空启",
+    "captureInvicibility": 900.0,
+    "research": {
+        "root": true,
+        "name": "泰拉世纪工厂",
+        "planet": "泰拉大陆"
+    }
+}

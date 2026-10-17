@@ -1,0 +1,45 @@
+{
+    // 建筑类型：重构工厂（对应原版Reconstructor）
+    "type": "Reconstructor",
+    // 建筑名称
+    "name": "铂冲初级重构厂",
+    // 建筑描述
+    "description": "将T1陆军单位升级为T2",
+    // 建筑生命值
+    "health": 180,
+    // 建筑自身建造耗时（单位：tick，游戏内1秒=60tick）
+    "buildTime": 300,
+    // 建筑占地面积（尺寸，对应10x10格）
+    "size": 3,
+    // 持续消耗资源配置
+    "consumes": {
+        // 电力消耗（单位：功率）
+        // 物品持续消耗配置
+        "items": [
+            "铂金锭/50",
+        ]
+    },
+    // 可升级的单位列表（[原T5单位ID, 升级后T6单位ID]）
+    "upgrades": [
+        ["铜兵", "铂冲"]
+    ],
+    // 单位升级耗时（单位：tick）
+    "constructTime": 300,
+    // 解锁该建筑所需的资源（研究完成后建造的前置资源）
+    "requirements": [
+        "铂金锭/60"
+    ],
+    // 建筑分类：单位类（对应游戏内单位建造/升级分类）
+    "category": "units",
+    // 建造界面可见性：显示（hidden为隐藏，shown为显示）
+    "buildVisibility": "shown",
+    // 解锁该建筑的研究项目ID
+  "research": {
+    // 父节点科技
+    "parent": "铜兵基本生产厂",
+    // 研究该科技需要的材料
+    "requirements": [
+      "铂金锭/150"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+    "type": "ItemTurret",
+    "name": "金旨",
+    "description": "发射导弹",
+    "size": 2,
+    "health": 80,
+    "maxAmmo":30,
+    "reload": 45,
+    "range": 290,
+    "inaccuracy": 5,
+    "recoil": 1.8,
+    "recoilTime": 50,
+    "buildTime": 100,
+    "category": "turret",
+    "shootY":0,
+    "rotateSpeed": 3.8,
+    "requirements": [
+        {"item": "金锭", "amount": 40}
+    ],
+    "drawer":{
+        "type":"DrawTurret",
+        "parts":
+        [
+            {
+    "type": "RegionPart",          // 零件固定类型，代表使用自定义外部贴图的零件
+    "mirror": false,                // 是否开启左右镜像，炮塔对称配件开启true，单侧独立配件填false
+    "x": 0,                       // 零件相对于炮塔旋转轴心的水平偏移坐标
+    "y": 0,                     // 零件相对于炮塔旋转轴心的垂直偏移坐标
+    "suffix": "-导弹",             // 贴图后缀名称，最终贴图名称=炮塔ID+该后缀
+    "under": true,                 // true绘制在炮塔主体下层，false覆盖绘制在炮塔主体上层
+    "originX": 0,                  // 贴图自身旋转轴心X坐标，默认以贴图中心点旋转
+    "originY": 0,                  // 贴图自身旋转轴心Y坐标，默认以贴图中心点旋转
+"progress":"recoil",
+"moves": [
+    {
+        "progress": "recoil",
+        "x": 0,
+        "y": -3,
+        "rot": 0
+    }
+]
+
+}
+]
+},
+    "shootSound": "shootDuo",
+    "limitRange": true,
+    "ammoTypes": {
+        "金锭": {
+            "type": "BasicBulletType",
+            "spawnUnit":"金旨导弹",
+            "ammoMultiplier":1
+        }
+    },
+    "research": {
+        "parent": "炮台",
+        "requirements": [
+            "金锭/100"
+        ]
+    }
+}

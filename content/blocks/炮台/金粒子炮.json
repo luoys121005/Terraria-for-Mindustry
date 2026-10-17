@@ -1,0 +1,42 @@
+{
+    "type": "ItemTurret",
+    "name": "金粒子炮",
+    "description": "发射大量子弹",
+    "size": 1,
+    "health": 20,
+    "maxAmmo":30,
+    "reload": 2,
+    "range": 180,
+    "inaccuracy": 5,
+    "recoil": 3,
+    "recoilTime": 5,
+    "buildTime": 100,
+    "category": "turret",
+    "rotateSpeed": 5,
+    "requirements": [
+        {"item": "金锭", "amount": 20}
+    ],
+    "shootSound": "shootMissileLarge",
+    "ammoTypes": {
+        "金锭": {
+            "type": "BasicBulletType",
+            "speed": 5,
+            "damage": 6,
+            "hitSize": 4.8,
+            "lifetime": 30,
+            "width": 6,
+            "height": 10,
+            "shootEffect": "shootSmall",
+            "backColor": "CBB349FF",
+            "frontColor": "CBB349FF",
+            "trailColor": "CBB349FF",
+            "ammoMultiplier":30
+        }
+    },
+    "research": {
+        "parent": "金粒子炮",
+        "requirements": [
+            "金锭/50"
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "铜矿",
+    "description": "矿物",
+    "details": "",
+    "color": "FF9261FF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 1,
+    "alwaysUnlocked": false,
+    "research": "石头"
+}

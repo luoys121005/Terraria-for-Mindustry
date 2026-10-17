@@ -1,0 +1,26 @@
+{
+    "type": "WallCrafter",
+    "name": "掘石机",
+    "description": "生产石头",
+    "ambientSound": "drill",
+    "health": 300,
+    "size": 2,
+    "fogRadius": 20,
+    "rotateSpeed": 6,
+    "drillTime": 23,
+    "itemCapacity": 1000,
+    "buildTime": 200,
+    "output": "石头",
+    "requirements": [
+        "木头/12",
+        "铜锭/12"
+    ],
+    "category": "production",
+    "research": {
+        "parent": "伐木场",
+        "requirements": [
+            "木头/12",
+            "铜锭/12"
+        ]
+    }
+}

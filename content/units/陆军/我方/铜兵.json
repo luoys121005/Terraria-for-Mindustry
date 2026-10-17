@@ -1,0 +1,69 @@
+{
+    "type": "tank",
+    "name": "铜兵",
+    "description":"由铜锭制成的小型兵种",
+    "treadRects": [
+        {
+            "type": "Rect",
+            "x": -46,
+            "y": 50,
+            "width": 26,
+            "height": 12
+        },
+        {
+            "type": "Rect",
+            "x": -47,
+            "y": -5,
+            "width": 6,
+            "height": 12
+        },
+        {
+            "type": "Rect",
+            "x": -38,
+            "y": -63,
+            "width": 17,
+            "height": 12
+        }
+    ],
+    "speed": 1.1,
+    "rotateSpeed": 2,
+    "hitSize": 22,
+    "targetAir": false,
+    "squareShape": true,
+    "omniMovement": false,
+    "rotateMoveFirst": true,
+    "health": 100,
+    "armor": 6,
+    "faceTarget": false,
+    "weapons": [
+        {
+            "name": "铜兵1",
+            "reload": 30,
+            "x": 0,
+            "y": 0,
+            "shootY": 12,
+            "shootX": 0,
+            "rotate": true,
+            "rotateSpeed": 6,
+            "inaccuracy": 0,
+            "shootSound": "shootFuse",
+            "recoil": 1,
+            "mirror":false,
+            "bullet":
+            {
+                "type": "ShrapnelBulletType",
+                "damage": 5,
+                "knockback": 2,
+                "ejectEffect": "none",
+                "shootEffect":"none",
+                "smokeEffect":"none",
+                "pierce": true,
+                "pierceEffect": "none",
+                "pointEffectSpace": 2,
+                "length": 128,
+                "weight":4
+            }
+        }
+    ],
+    "research": "铜兵基本生产厂"
+}

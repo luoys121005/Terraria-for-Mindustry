@@ -1,0 +1,85 @@
+{
+    "type": "ItemTurret",
+    "name": "锡重炮",
+    "localizedName": "锡重炮",
+    "description": "发射大型炮弹",
+    "category": "turret",
+    "size": 2,
+    "health": 300,
+    "reload": 21,
+    "range": 220,
+    "rotateSpeed": 2,
+    "recoil": 3,
+    "velocityRnd":0.1,
+    "requirements":[
+        "锡锭/30"
+    ],
+    "inaccuracy": 5,
+    "buildTime": 200,
+    "shootSound": "shootFlamePlasma",
+    "hasPower": false,
+    "targetAir": true,
+    "targetGround": true,
+    "shoot": {
+        "type": "ShootAlternate",
+        "shots": 5,
+        "burstSpacing": 0,
+        "barrelSpacing":0
+    },
+    "ammoTypes": {
+        "锡锭": {
+            "type": "BasicBulletType",
+            "width": 12,
+            "height": 20,
+            "speed": 5.2,
+            "lifetime": 45,
+            "damage": 9,
+            "sprite": "large-orb",
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    "shootTitan",
+                    {
+                        "type": "WaveEffect",
+                        "colorTo": "E8E4DFFF",
+                        "sizeTo": 26,
+                        "lifetime": 14,
+                        "strokeFrom": 4
+                    }
+                ]
+            },
+            "smokeEffect": "shootSmokeTitan",
+            "trailEffect": "missileTrail",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "E8E4DFFF",
+                "smokeColor": "808080FF",
+                "sparkColor": "5E8C31FF",
+                "waveStroke": 4,
+                "waveRad": 40
+            },
+            "despawnEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "E8E4DFFF",
+                "smokeColor": "808080FF",
+                "sparkColor": "5E8C31FF",
+                "waveStroke": 4,
+                "waveRad": 40
+            },
+            "despawnSound": "explosionAfflict",
+            "shootSound": "shootAfflict",
+            "explosive": true,
+            "explodeRadius": 24,
+            "explodeDamage": 9,          
+            "ammoMultiplier": 5
+        }
+    },
+    "shootX": 0,
+    "shootY": 6,
+    "research": {
+        "parent": "锡阻",
+        "requirements": [
+            "锡锭/85"
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "魔金",
+    "description": "锭",
+    "color": "D1C9FFFF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 2,
+    "alwaysUnlocked": false,
+    "research": "魔锭"
+}

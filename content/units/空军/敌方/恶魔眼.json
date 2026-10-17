@@ -1,0 +1,54 @@
+{
+"type": "flying",
+"faceTarget": true,
+"name":"恶魔眼",
+  "rotateSpeed": 6,
+"circleTarget": true,
+"omniMovement": true,
+"rotateMoveFirst": true,
+"flying": true,
+"accel": 0.05,
+"drag": 0.03,
+ 
+"hitSize": 15,
+"trailLength": 8,
+"speed": 3.05,
+"health": 60,
+"outlineColor": "2E2F34FF",
+ 
+"engineSize": 3.5,
+"engineOffset": 10,
+ 
+"weapons": [
+{
+"name": "恶魔眼1",
+"x": 0,
+"y": 0,
+"mirror": false,
+"shootSound": "none",
+"reload": 90,
+"rotate": false,
+"bullet": {
+"type": "RailBulletType",
+"damage": 18,
+"pierce":false,
+"length": 180,
+"recoil": -13,
+"smokeEffect": "none",
+"shootEffect": {
+"followParent": true,
+"type": "ParticleEffect",
+"region": "terrariaformindustry-冲刺",
+"particles": 1,
+"lifetime": 20,
+"length": 1,
+"sizeFrom": 30,
+"sizeTo": 30,
+"lightColor": "BAFFF9FF",
+"colorFrom": "36B1DDFF",
+"colorTo": "BAFFF9FF"
+}
+}
+}
+]
+}

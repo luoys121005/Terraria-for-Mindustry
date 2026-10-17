@@ -1,0 +1,123 @@
+{
+    "type": "ItemTurret",
+    "name": "魔光炮",
+    "localizedName": "魔光炮",
+    "description": "撕开腐化裂缝攻击敌人",
+    "size": 2,
+    "category": "turret",
+    "health": 600,
+    "reload": 21,
+    "buildTime": 200,
+    "requirements": [
+        "魔锭/45"
+    ],
+    "range": 160,
+    "inaccuracy": 0,
+    "research": {
+        "parent": "金旨",
+        "requirements": [
+            "魔锭/120"
+        ]
+    },
+    "shootSound": "裂隙",
+    "shootSoundPitch": 1.4,
+    "shootSoundVolume": 0.6,
+    "drawer": {
+        "type": "DrawTurret",
+        "base": "reinforced-",
+        "parts": [
+            {
+                "type": "HaloPart",
+                "progress": { "type": "warmup", "op": "curve", "interp": "pow2In" },
+                "color": "BEB7E9FF",
+                "lightColor": "BEB7E9FF",
+                "tri": true,
+                "shapes": 4,
+                "radius": 0, "radiusTo": 6,
+                "hollow": true,
+                "triLengthFrom": 0, "triLengthTo": 6,
+                "haloRadiusFrom": 0, "haloRadiusTo": 12,
+                "haloRotateSpeed": 3,
+                "shapeRotation": 180.0,
+               "layer": 105.0, "x": 0.0, "y": 8.0
+            }
+        ]
+    },
+    "shootX": 0,
+    "shootY": 8,
+    "recoil": 1,
+    "rotateSpeed": 2,
+    "ammoTypes": {
+        "魔锭": {
+            "type": "RailBulletType",
+            "damage": 16,
+            "length": 160,
+            "lifetime": 1,
+            "ammoMultiplier": 3,
+            "pierce": true,
+            "color": "FFFFFF00",
+            "fragOnHit": false,
+            "fragOnDespawn": true,
+            "fragOnAbsorb": false,
+            "fragBullets": 1,
+            "fragSpread": 0,
+            "fragRandomSpread": 0,
+            "fragAngle": 0,
+            "fragVelocityMin": 0,
+            "fragVelocityMax": 0,
+            "fragOffsetMin": 0,
+            "fragOffsetMax": 0,
+            "despawnEffect": "none",
+            "smokeEffect": "none",
+            "hitSound": "hit",
+            "hitEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "region": "terrariaformindustry-小空间撕裂",
+                        "length": 0,
+                        "particles": 1,
+                        "lifetime": 15,
+                        "sizeFrom": 0,
+                        "sizeTo": 32,
+                        "rotation": 0,
+                        "layer": 110
+                    }
+                ]
+            },
+            "shootEffect": {
+                "type": "MultiEffect",
+                "cone": 0,
+                "followParent" : false,
+                "rotWithParent" : false,
+                "effects": [
+                    {
+                        "type": "ParticleEffect",
+                        "region": "terrariaformindustry-空间裂缝",
+                        "length": 0,
+                        "sizeFrom":80,
+                        "sizeTo":0,
+                        "offsetX": 80,
+                        "particles": 1,
+                        "lifetime": 26,
+                        "rotation": 0,
+                        "layer": 110
+                    },
+                    {
+                        "type": "WaveEffect",
+                        "lifetime": 10,
+                        "interp": "circleOut",
+                        "sizeFrom": 16,
+                        "sizeTo": 0,
+                        "strokeFrom": 3.5,
+                        "strokeTo": 1,
+                        "colorFrom": "2A2752FF",
+                        "colorTo": "BEB7E9FF",
+                        "lightColor": "BEB7E9FF"
+                    }
+                ]
+            }
+        }
+    }
+}

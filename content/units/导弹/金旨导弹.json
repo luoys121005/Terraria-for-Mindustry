@@ -1,0 +1,85 @@
+{
+    "type": "missile",
+    "controller": "MissileAI",
+    "lowAltitude": true,
+    "speed": 10,
+    "rotateSpeed": 10,
+    "homingDelay": 8,
+    "lifetime": 45,
+    "isEnemy": false,
+    "allowedInPayloads": false,
+    "playerControllable": false,
+    "physics": false,
+    "useUnitCap": false,
+    "createWreck": false,
+    "createScorch": false,
+    "flying": true,
+    "hidden": false,
+    "health": 100,
+    "hitSize": 6,
+    "trailColor": "FFF9B7FF",
+    "trailLength": 12,
+    "name": "金旨导弹",
+    "description": "远程火箭弹，击中时产生爆炸。",
+    "engineColor": "DEEDFFFF",
+    "engineSize": 2.5,
+    "engineOffset": 6,
+    "engineLayer": 110,
+    "outlineColor": "272930FF",
+    "missileAccelTime": 20,
+    "drawCell": false,
+    "interceptTarget": false,
+    "weapons": [
+        {
+            "name": "爆炸",
+            "shootCone": 360,
+            "shootOnDeath": true,
+            "controllable": true,
+            "shootSound": "none",
+            "range": 32,
+            "bullet": {
+                "type": "ExplosionBulletType",
+                "instantDisappear": true,
+                "keepVelocity": false,
+                "splashDamageRadius": 32,
+                "splashDamage": 15,
+                "killShooter": true,
+                "speed": 48,
+                "lifetime": 1,
+                "offsetX": 0,
+                "offsetY": -3,
+                "hitEffect": {
+                    "type": "multiEffect",
+                    "effects": [
+                        {
+                            "type": "WaveEffect",
+                            "lifetime": 15,
+                            "sizeFrom": 0,
+                            "sizeTo": 60,
+                            "strokeFrom": 7.5,
+                            "strokeTo": 0,
+                            "colorFrom": "CBD97FFF",
+                            "colorTo": "EDF3A9FF"
+                        },
+                        {
+                            "type": "ParticleEffect",
+                            "particles": 1,
+                            "sizeFrom": 60,
+                            "sizeTo": 0,
+                            "length": 0,
+                            "interp": "bounceOut",
+                            "lifetime": 50,
+                            "region": "terrariaformindustry-爆炸1",
+                            "lightColor": "D5D500FF",
+                            "colorFrom": "D5D500FF",
+                            "colorTo": "FFFF00FF",
+                            "layer": 110,
+                            "offsetX": 0,
+                            "offsetY": 0
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

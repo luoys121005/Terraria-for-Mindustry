@@ -1,0 +1,12 @@
+{
+    "name": "铂金矿墙",
+    "wallOre": true,
+    "type": "OreBlock",
+    "playerUnmineable": false,
+    "itemDrop": "铂金矿",
+    "mapColor": "C9DDE3FF",
+    "useColor": true,
+    "oreDefault": true,
+    "oreThreshold": 4,
+    "oreScale": 20
+}

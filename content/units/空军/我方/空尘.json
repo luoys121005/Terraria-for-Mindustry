@@ -1,0 +1,115 @@
+{
+    "type": "hover",                    // 单位类型：悬浮单位
+    "name":"空尘",
+    "flying": false,                     // 是否真正飞行
+    "hovering": true,                    // 是否悬浮
+    "accel": 0.19,                       // 加速度（越大起步越快）
+    "drag": 0.15,                        // 阻力（越大刹车越稳）
+    "faceTarget": true,                  // 是否自动面向攻击目标
+    "useEngineElevation": false,         // 是否使用引擎高度差
+    "canDrown": false,                   // 是否会溺水
+    "lowAltitude": false,                // 是否为低空单位
+    "outlineColor": "2E2F34FF",          // 单位轮廓颜色
+
+    "engineSize": 2,                     // 引擎粒子大小
+    "engineOffset": 4,                   // 引擎位置向后偏移量
+    "trailLength": 7,                    // 引擎尾迹长度
+
+    // 悬浮部件（光圈）配置
+    "parts": [
+        {
+            "type": "HoverPart",         // 部件类型：悬浮光圈
+            "mirror": true,              // 是否左右镜像生成
+            "x": 0,
+            "y": -7,                     // 部件坐标位置
+            "radius": 11,                 // 光圈半径
+            "phase": 90,                 // 光圈动画起始相位（角度）
+            "stroke": 2,                  // 光圈线条粗细
+            "layerOffset": -0.001,        // 图层上下层级偏移
+            "color": "C2FF43FF",           // 光圈颜色
+            "sides": 6
+        },
+        {
+            "type": "HoverPart",         // 部件类型：悬浮光圈
+            "mirror": true,              // 是否左右镜像生成
+            "x": -5.8,
+            "y": 6,                     // 部件坐标位置
+            "radius": 7,                 // 光圈半径
+            "phase": 90,                 // 光圈动画起始相位（角度）
+            "stroke": 2,                  // 光圈线条粗细
+            "layerOffset": -0.001,        // 图层上下层级偏移
+            "color": "C2FF43FF",           // 光圈颜色
+            "sides": 4
+        }
+    ],
+
+    "hitSize": 12,                       // 碰撞体积大小
+    "rotateSpeed": 6,                    // 单位旋转速度
+    "itemCapacity": 0,                   // 可携带物品容量
+    "buildSpeed": 0,                     // 建造/维修速度
+    "speed": 2,                          // 移动速度
+    "health": 150,                       // 生命值
+    "armor": 0,                          // 护甲值
+    "range": 80,                         // 攻击射程
+
+    // 武器组
+    "weapons": [
+        {
+            "name": "空尘1",             // 武器自定义名称
+            "reload": 20,                // 射击间隔（越小射速越快）
+            "x": -4.25,
+            "y": 0,                      // 武器挂载坐标
+            "mirror": true,              // 是否左右镜像双武器
+            "rotate": false,             // 武器是否独立旋转
+            "shootSound": "shootArc",    // 射击音效
+            "shoot":{
+                "shots": 7,                // 一次同时发射数量
+                "shotDelay": 0.1,          // 多发之间的发射间隔
+                "spread": 0               // 散射角度（越大越散）
+            },
+            // 子弹属性
+            "bullet": {
+                "type": "LightningBulletType",  // 子弹类型：闪电子弹
+                "damage": 3,              // 子弹伤害
+                "speed": 6,                // 子弹飞行速度
+                "lifetime": 20,            // 子弹存在时间
+                "frontColor": "84F491FF",  // 子弹正面主颜色
+                "backColor": "64CF8DAA",   // 子弹背面次颜色
+                "length": 65,              // 闪电长度
+                "hitSound": "shockBullet", // 命中目标音效
+
+                // 射击时的波纹特效
+                "shootEffect": {
+                    "type": "WaveEffect",   // 特效类型：波纹
+                    "lifetime": 10,         // 特效持续时间
+                    "sizeFrom": 0,          // 特效起始大小
+                    "sizeTo": 15,           // 特效最终大小
+                    "colorFrom": "84F491FF",// 特效起始颜色
+                    "colorTo": "64CF8DAA",  // 特效结束颜色
+                    "strokeFrom": 1.5,      // 特效线条起始粗细
+                    "strokeTo": 0           // 特效线条结束粗细
+                },
+
+                // 命中目标时的波纹特效
+                "hitEffect": {
+                    "type": "WaveEffect",   // 特效类型：波纹
+                    "lifetime": 25,         // 特效持续时间
+                    "sizeFrom": 0,          // 特效起始大小
+                    "sizeTo": 20,           // 特效最终大小
+                    "colorFrom": "84F491FF",// 特效起始颜色
+                    "colorTo": "64CF8DAA",  // 特效结束颜色
+                    "strokeFrom": 3.5,      // 特效线条起始粗细
+                    "strokeTo": 0           // 特效线条结束粗细
+                }
+            }
+        }
+    ],
+  "research": {
+    // 父节点科技
+    "parent": "空尘基础构建厂",
+    // 研究该科技需要的材料
+    "requirements": [
+      "金锭/50"
+    ]
+  }
+}

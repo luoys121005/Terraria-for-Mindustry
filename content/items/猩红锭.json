@@ -1,0 +1,11 @@
+{
+    "name": "猩红锭",
+    "description": "锭",
+    "color": "D83B3FFF",
+    "explosiveness": 0,
+    "flammability": 0,
+    "radioactivity": 0,
+    "hardness": 2,
+    "alwaysUnlocked": false,
+    "research": "猩红矿"
+}

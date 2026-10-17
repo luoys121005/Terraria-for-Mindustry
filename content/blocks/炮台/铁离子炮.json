@@ -1,0 +1,167 @@
+{
+    "type": "ItemTurret",
+    "name": "铁离子炮",
+    "localizedName": "铁离子炮",
+    "description": "发射一个间断分裂追踪子弹并结束分裂大量追踪子弹",
+    "category": "turret",
+    "requirements": [
+        "铁锭/45"
+    ],
+    "size": 2,
+    "scaledHealth": 300,
+    "inaccuracy": 0,
+    "shake": 2,
+    "shootY": 4,
+    "reload": 20,
+    "cooldownTime": 45,
+    "recoil": 3,
+    "range": 224,
+    "rotateSpeed": 1.5,
+    "limitRange": -55,
+    "targetAir": true,
+    "targetGround": true,
+    "buildTime": 200,
+    "ammoTypes": {
+        "铁锭": {
+            "type": "BasicBulletType",
+            "damage": 12,
+            "speed": 5,
+            "lifetime": 45,
+            "width": 16,
+            "height": 16,
+            "pierceCap": 5,
+            "buildingDamageMultiplier": 0.3,
+            "fragOnHit": true,
+            "shrinkX": 0,
+            "shrinkY": 0,
+            "trailLength": 24,
+            "trailWidth": 2.2,
+            "trailInterval": 3,
+            "trailParam": 4,
+            "hitColor": "E8E4DFFF",
+            "backColor": "E8E4DFFF",
+            "frontColor": "FFFFFFFF",
+            "trailColor": "E8E4DFFF",
+            "sprite": "large-orb",
+            "shootEffect": {
+                "type": "MultiEffect",
+                "effects": [
+                    "shootTitan",
+                    {
+                        "type": "WaveEffect",
+                        "colorTo": "E8E4DFFF",
+                        "sizeTo": 26,
+                        "lifetime": 14,
+                        "strokeFrom": 4
+                    }
+                ]
+            },
+            "smokeEffect": "shootSmokeTitan",
+            "trailEffect": "missileTrail",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "E8E4DFFF",
+                "smokeColor": "808080FF",
+                "sparkColor": "5E8C31FF",
+                "waveStroke": 4,
+                "waveRad": 40
+            },
+            "despawnEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "E8E4DFFF",
+                "smokeColor": "808080FF",
+                "sparkColor": "5E8C31FF",
+                "waveStroke": 4,
+                "waveRad": 40
+            },
+            "despawnSound": "explosionAfflict",
+            "shootSound": "shootAfflict",
+            "bulletInterval": 14,
+            "intervalRandomSpread": 15,
+            "intervalBullets": 2,
+            "intervalAngle": 180,
+            "intervalSpread": 300,
+            "intervalBullet": {
+                "type": "BasicBulletType",
+                "damage": 6,
+                "speed": 3,
+                "width": 9,
+                "height": 15,
+                "hitSize": 5,
+                "pierceCap": 3,
+                "lifetime": 45,
+                "pierceBuilding": true,
+                "buildingDamageMultiplier": 0.3,
+                "homing": true,
+                "homingPower": 0.1,
+                "homingRange": 9999999999,
+                "hitColor": "E8E4DFFF",
+                "backColor": "E8E4DFFF",
+                "frontColor": "FFFFFFFF",
+                "trailColor": "E8E4DFFF",
+                "trailWidth": 2.1,
+                "trailLength": 5,
+                "hitEffect": {
+                    "type": "WaveEffect",
+                    "colorFrom": "E8E4DFFF",
+                    "colorTo": "E8E4DFFF",
+                    "sizeTo": 4,
+                    "strokeFrom": 4,
+                    "lifetime": 10
+                },
+                "despawnEffect": {
+                    "type": "WaveEffect",
+                    "colorFrom": "E8E4DFFF",
+                    "colorTo": "E8E4DFFF",
+                    "sizeTo": 4,
+                    "strokeFrom": 4,
+                    "lifetime": 10
+                }
+            },
+            "fragBullets": 10,
+            "fragVelocityMin": 0.5,
+            "fragVelocityMax": 1.2,
+            "fragLifeMin": 0.5,
+            "fragBullet": {
+                "type": "BasicBulletType",
+                "damage": 6,
+                "speed": 3,
+                "width": 9,
+                "height": 15,
+                "hitSize": 5,
+                "pierceCap": 3,
+                "lifetime": 28,
+                "pierceBuilding": true,
+                "buildingDamageMultiplier": 0.3,
+                "hitColor": "E8E4DFFF",
+                "backColor": "E8E4DFFF",
+                "frontColor": "E8E4DFFF",
+                "trailColor": "E8E4DFFF",
+                "trailWidth": 2.1,
+                "trailLength": 5,
+                "hitEffect": {
+                    "type": "WaveEffect",
+                    "colorFrom": "E8E4DFFF",
+                    "colorTo": "E8E4DFFF",
+                    "sizeTo": 4,
+                    "strokeFrom": 4,
+                    "lifetime": 10
+                },
+                "despawnEffect": {
+                    "type": "WaveEffect",
+                    "colorFrom": "E8E4DFFF",
+                    "colorTo": "E8E4DFFF",
+                    "sizeTo": 4,
+                    "strokeFrom": 4,
+                    "lifetime": 10
+                }
+            }
+        }
+    },
+    "research": {
+        "parent": "铁刺",
+        "requirements": [
+            "铁锭/95"
+        ]
+    }
+}

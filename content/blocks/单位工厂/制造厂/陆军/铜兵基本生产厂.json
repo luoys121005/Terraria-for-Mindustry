@@ -1,0 +1,41 @@
+{
+  // 建筑类型：单位制造厂
+  "type": "UnitFactory",
+  // 建筑名称
+  "name": "铜兵基本生产厂",
+  // 建筑大小 3x3
+  "size": 3,
+  // 生命值
+  "health": 300,
+  // 是否可配置
+  "configurable": false,
+  // 建筑自身合成需求（制作这个方块需要的材料）
+  "requirements": [
+    "铜锭/20"
+  ],
+  // 科技树相关
+  "research": {
+    // 父节点科技
+    "parent": "天启核心",
+    // 研究该科技需要的材料
+    "requirements": [
+      "铜锭/20"
+    ]
+  },
+  "buildTime": 300,
+  // 分类：单位
+  "category": "units",
+  // 可生产的单位列表
+  "plans": [
+    {
+      // 生产的单位ID
+      "unit": "铜兵",
+      // 生产时间
+      "time": 600,
+      // 生产该单位需要的材料
+      "requirements": [
+        "铜锭/48"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "type": "Duct",
+    "name": "铜管道",
+    "description": "最基础的管道",
+    "health": 100,
+    "speed": 2,
+    "buildTime": 1,
+    "armored": false,
+    "requirements": ["铜锭/1"],
+    "category": "distribution",
+    "research": "天启核心"
+}

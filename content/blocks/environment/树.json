@@ -1,0 +1,12 @@
+{
+    "name": "树",
+    "wallOre": true,
+    "type": "OreBlock",
+    "playerUnmineable": true,
+    "itemDrop": "木头",
+    "mapColor": "FF9261FF",
+    "useColor": true,
+    "oreDefault": true,
+    "oreThreshold": 3,
+    "oreScale": 20
+}
